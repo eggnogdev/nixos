@@ -24,16 +24,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      # import the system wide modules
-      # 
-      # modules here can be accessed by `outputs.nixosModules`
-      nixosModules = import ./modules/nixos;
-
-      # import the home/user specific modules
-      # 
-      # modules here can be accessed by `outputs.homeModules`
-      homeModules = import ./modules/home;
-
       # My NixOS configurations
       #
       # these can be used for configuring differents hosts. for example I could
@@ -45,30 +35,6 @@
           modules = [ 
             ./nixos/configuration.nix
             inputs.home-manager.nixosModules.default
-          ];
-        };
-      };
-
-      # My home configurations
-      #
-      # to add another user, simply create a <name>-home.nix file for them in
-      # the ./home directory which will define all packages and modules 
-      # necessary for that specific user. Create a new entry to this 
-      # `homeConfigurations` definition just like the others to add your new
-      # user to the system
-      homeConfigurations = {
-        "eggnog" = inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = pkgs;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home/eggnog-home.nix
-          ];
-        };
-        "student" = inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = pkgs;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home/student-home.nix
           ];
         };
       };

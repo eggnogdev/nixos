@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, outputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   hdd-path = "/mnt/e981340d-830e-4508-ba3d-a00bac499cac";
@@ -114,22 +114,6 @@ in
     enable = true;
   };
 
-  users.users.eggnog = {
-    isNormalUser = true;
-    description = "daniel";
-    shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
-  users.users.student = {
-    isNormalUser = true;
-    description = "student";
-    shell = pkgs.fish;
-    extraGroups = [];
-    packages = with pkgs; [];
-  };
-
   environment.systemPackages = with pkgs; [
     android-studio
     bitwarden
@@ -156,6 +140,29 @@ in
   services.syncthing = {
     enable = true;
     user = "syncthing";
+  };
+
+  home-manager.users = {
+    eggnog = import ../home/eggnog.nix;
+    student = import ../home/student.nix;
+  };
+
+  users.users.eggnog = {
+    isNormalUser = true;
+    initialPassword = "1234";
+    description = "daniel";
+    shell = pkgs.fish;
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [];
+  };
+
+  users.users.student = {
+    isNormalUser = true;
+    initialPassword = "1234";
+    description = "student";
+    shell = pkgs.fish;
+    extraGroups = [];
+    packages = with pkgs; [];
   };
 
   # This value determines the NixOS release from which the default

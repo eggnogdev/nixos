@@ -1,9 +1,11 @@
-{ outputs, config, pkgs, ... }:
+{ outputs, config, pkgs, nixpkgs, ... }:
 
 {
   imports = [
-    outputs.homeModules.protonmail-bridge
+    ../modules/home/protonmail-bridge.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
   
   home.username = "eggnog";
   home.homeDirectory = "/home/eggnog";
@@ -11,6 +13,7 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
+    hello
     discord
     prismlauncher
     signal-desktop
