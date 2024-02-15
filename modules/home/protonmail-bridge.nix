@@ -1,3 +1,6 @@
+# module courtesy of 3699n on discourse.nixos.org
+# https://discourse.nixos.org/t/writing-a-service-for-protonmail-bridge/10623/3
+# archive: https://archive.ph/Ggfjc
 { config, lib, pkgs, ... }:
 
 with lib;

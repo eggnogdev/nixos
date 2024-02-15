@@ -1,8 +1,8 @@
-{ config, pkgs, nixpkgs, ... }:
+{ outputs, config, pkgs, ... }:
 
 {
   imports = [
-    ./protonmail-bridge.nix
+    outputs.homeModules.protonmail-bridge
   ];
   
   home.username = "eggnog";
@@ -10,13 +10,13 @@
 
   home.stateVersion = "23.11";
 
-  nixpkgs.config.allowUnfree = true;
-  home.packages = [
-    pkgs.discord
-    pkgs.prismlauncher
-    pkgs.signal-desktop
-    pkgs.steam
-    pkgs.woeusb # create bootable USB disks from Windows ISO images
+  home.packages = with pkgs; [
+    discord
+    prismlauncher
+    signal-desktop
+    steam
+    thunderbird
+    woeusb # create bootable USB disks from Windows ISO images
   ];
 
   home.file = {};

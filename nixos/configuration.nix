@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, outputs, ... }:
 
 let
   hdd-path = "/mnt/e981340d-830e-4508-ba3d-a00bac499cac";
@@ -130,17 +130,11 @@ in
     packages = with pkgs; [];
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "eggnog" = import ./eggnog-home.nix;
-      "student" = import ./student-home.nix;
-    };
-  };
-
   environment.systemPackages = with pkgs; [
     android-studio
     bitwarden
+    chromium
+    firefox
     kitty
     libreoffice
     neofetch
@@ -150,7 +144,6 @@ in
     python3
     sublime-merge
     vim
-    # vscodium
     wget
   ];
 
