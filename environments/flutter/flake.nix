@@ -1,10 +1,15 @@
 {
-description = "Flutter 3.13.x";
-inputs = {
-  nixpkgs.url = "nixpkgs/nixos-unstable";
-  flake-utils.url = "github:numtide/flake-utils";
-};
-outputs = { self, nixpkgs, flake-utils }:
+  # Template for flutter development environment. take this place it in your
+  # flutter project directory or merge it with an existing flake.nix
+  description = "Flutter Dev Env";
+
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+
+  outputs = { self, nixpkgs, flake-utils }:
+
   flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
@@ -22,8 +27,8 @@ outputs = { self, nixpkgs, flake-utils }:
         buildToolsVersions = [ buildToolsVersionForAapt2 "30.0.3" ];
         toolsVersion = "26.1.1";
         platformToolsVersion = "34.0.5";
-        platformVersions = [ "33" "28" ];
-        abiVersions = [ "armeabi-v7a" "arm64-v8a" ];
+        platformVersions = [ "34" "33" "28" ];
+        abiVersions = [ "armeabi-v7a" "arm64-v8a" "x86_64" ];
         includeEmulator = true;
         emulatorVersion = "34.1.9";
         includeSources = true;
@@ -48,5 +53,6 @@ outputs = { self, nixpkgs, flake-utils }:
             xorg.libX11
           ];
         };
-    });
+    }
+  );
 }
