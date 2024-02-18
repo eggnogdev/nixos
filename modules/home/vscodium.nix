@@ -21,6 +21,7 @@ in
           pkief.material-product-icons
           ms-python.python
           rust-lang.rust-analyzer
+          esbenp.prettier-vscode
         ];
         description = "List of extension packages to use";
       };
@@ -41,6 +42,8 @@ in
           ];
           "editor.wordWrap" = "on";
           "editor.tabSize" = 2;
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "editor.formatOnSave" = true;
         };
         description = "VSCodium user settings.json";
       };

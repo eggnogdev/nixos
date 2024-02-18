@@ -22,8 +22,8 @@
 
   programs.git = {
     enable = true;
-    userName = "AE3336";
-    userEmail = "AE3336@student.jamk.fi";
+    userName = "eggnog";
+    userEmail = "git.1t3t3@eggnog.dev";
   };
 
   programs.vscodium.enable = true;
