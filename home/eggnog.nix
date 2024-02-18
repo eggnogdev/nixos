@@ -2,8 +2,7 @@
 
 {
   imports = [
-    ../modules/home/protonmail-bridge.nix
-    ../modules/home/vscodium.nix
+    ../modules/home/default.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -35,6 +34,9 @@
   };
 
   programs.vscodium.enable = true;
+
+  # sublime text seems to cause errors... 
+  # programs.sublime.enable = true;
 
   services.protonmail-bridge = {
     enable = false;

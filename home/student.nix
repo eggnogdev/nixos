@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../modules/home/vscodium.nix
+    ../modules/home/default.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -27,6 +27,7 @@
   };
 
   programs.vscodium.enable = true;
+  # programs.sublime.enable = true;
 
   programs.home-manager.enable = true;
 }
