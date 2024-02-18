@@ -126,7 +126,6 @@ in
     pciutils
     protonvpn-gui
     python3
-    sublime-merge
     vim
     wget
   ];

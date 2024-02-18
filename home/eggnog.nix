@@ -1,8 +1,9 @@
-{ outputs, config, pkgs, nixpkgs, ... }:
+{ pkgs, nixpkgs, ... }:
 
 {
   imports = [
     ../modules/home/protonmail-bridge.nix
+    ../modules/home/vscodium.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -18,6 +19,7 @@
     prismlauncher
     signal-desktop
     steam
+    sublime-merge
     thunderbird
     woeusb # create bootable USB disks from Windows ISO images
   ];
@@ -32,18 +34,7 @@
     userEmail = "git.1t3t3@eggnog.dev";
   };
 
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscodium;
-    extensions = with pkgs.vscode-extensions; [
-      dracula-theme.theme-dracula
-      dart-code.dart-code
-      dart-code.flutter
-      pkief.material-product-icons
-      ms-python.python
-      rust-lang.rust-analyzer
-    ];
-  };
+  programs.vscodium.enable = true;
 
   services.protonmail-bridge = {
     enable = false;

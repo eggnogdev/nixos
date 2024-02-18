@@ -1,6 +1,10 @@
-{ nixpkgs, ... }:
+{ pkgs, nixpkgs, ... }:
 
 {
+  imports = [
+    ../modules/home/vscodium.nix
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
   home.username = "student";
@@ -8,7 +12,9 @@
 
   home.stateVersion = "23.11";
 
-  home.packages = [];
+  home.packages = with pkgs; [
+    sublime-merge
+  ];
 
   home.file = {};
 
@@ -19,6 +25,8 @@
     userName = "AE3336";
     userEmail = "AE3336@student.jamk.fi";
   };
+
+  programs.vscodium.enable = true;
 
   programs.home-manager.enable = true;
 }
