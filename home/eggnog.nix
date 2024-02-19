@@ -13,7 +13,6 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
-    hello
     discord
     prismlauncher
     signal-desktop
