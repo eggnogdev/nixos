@@ -44,6 +44,15 @@ in
           "editor.tabSize" = 2;
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
           "editor.formatOnSave" = true;
+          "[dart]" =  {
+            "editor.formatOnSave" = true;
+            "editor.formatOnType" = true;
+            "editor.selectionHighlight" = false;
+            "editor.suggestSelection" = "first";
+            "editor.tabCompletion" = "onlySnippets";
+            "editor.wordBasedSuggestions" = "off";
+          };
+          "editor.cursorSmoothCaretAnimation" = "on";
         };
         description = "VSCodium user settings.json";
       };
