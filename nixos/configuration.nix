@@ -20,6 +20,8 @@ in
   
   boot.initrd.luks.devices."luks-0edce6e9-b390-4f18-b860-f4bb1c3dc20f".device = "/dev/disk/by-uuid/0edce6e9-b390-4f18-b860-f4bb1c3dc20f";
 
+  security.apparmor.enable = true;
+
   networking.hostName = "teekannu"; 
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
