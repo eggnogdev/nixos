@@ -7,12 +7,15 @@
   description = "eggnogOS";
 
   inputs = {
-    #use the stable branch
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    # use the stable branch
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+
+    # use the unstable branch
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # home manager for handling non system-wide configurations
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

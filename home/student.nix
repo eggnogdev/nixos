@@ -10,7 +10,7 @@
   home.username = "student";
   home.homeDirectory = "/home/student";
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   home.packages = with pkgs; [
     sublime-merge

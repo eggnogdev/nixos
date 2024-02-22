@@ -10,7 +10,7 @@
   home.username = "eggnog";
   home.homeDirectory = "/home/eggnog";
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   home.packages = with pkgs; [
     discord

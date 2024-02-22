@@ -60,13 +60,12 @@ in
     LC_TIME = "fi_FI.UTF-8";
   };
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
   services.xserver = {
-    layout = "us";
-    xkbVariant = "dvorak";
+    enable = true;
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
+    xkb.layout = "us";
+    xkb.variant = "dvorak";
   };
 
   console.keyMap = "dvorak";
