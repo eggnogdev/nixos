@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     sublime-merge
+    yed
   ];
 
   home.file = {};
