@@ -129,11 +129,22 @@ in
     libreoffice
     neofetch
     nvidia-system-monitor-qt
+    obsidian
     pciutils
     protonvpn-gui
     python3
+    sublime4
     vim
     wget
+  ];
+
+  ###
+  # INSECURE PACKAGES REMEMBER TO CHECK ON THESE AND MAKE SURE THEY AREN'T 
+  # ALWAYS NECESSARY.
+  ###  
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0" # obsidian
+    "openssl-1.1.1w" # sublime4
   ];
 
   fonts.packages = with pkgs; [
