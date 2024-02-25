@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     discord
+    osu-lazer-bin
     prismlauncher
     signal-desktop
     steam
