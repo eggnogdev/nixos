@@ -20,7 +20,7 @@
     steam
     sublime-merge
     thunderbird
-    tor
+    tor-browser
     woeusb # create bootable USB disks from Windows ISO images
   ];
 
