@@ -125,6 +125,7 @@ in
     bitwarden
     chromium
     firefox
+    gparted
     kitty
     libreoffice
     neofetch
