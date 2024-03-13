@@ -134,6 +134,7 @@ in
     pciutils
     protonvpn-gui
     python3
+    rustdesk
     sublime4
     vim
     wget
