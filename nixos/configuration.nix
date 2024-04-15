@@ -123,6 +123,7 @@ in
   environment.systemPackages = with pkgs; [
     android-studio
     bitwarden
+    cargo
     chromium
     firefox
     gparted
@@ -134,6 +135,7 @@ in
     pciutils
     protonvpn-gui
     python3
+    rustc
     rustdesk
     sublime4
     vim
@@ -143,7 +145,7 @@ in
   ###
   # INSECURE PACKAGES REMEMBER TO CHECK ON THESE AND MAKE SURE THEY AREN'T 
   # ALWAYS NECESSARY.
-  ###  
+  ###
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0" # obsidian
     "openssl-1.1.1w" # sublime4
