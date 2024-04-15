@@ -126,6 +126,7 @@ in
     cargo
     chromium
     firefox
+    gcc
     gparted
     kitty
     libreoffice
