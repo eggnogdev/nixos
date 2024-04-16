@@ -36,9 +36,6 @@
 
   programs.vscodium.enable = true;
 
-  # sublime text seems to cause errors... 
-  # programs.sublime.enable = true;
-
   # services.protonmail-bridge = {
   #   enable = false;
   #   nonInteractive = true;

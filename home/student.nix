@@ -29,7 +29,6 @@
   };
 
   programs.vscodium.enable = true;
-  # programs.sublime.enable = true;
 
   programs.home-manager.enable = true;
 }
