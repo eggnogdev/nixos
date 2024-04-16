@@ -39,10 +39,10 @@
   # sublime text seems to cause errors... 
   # programs.sublime.enable = true;
 
-  services.protonmail-bridge = {
-    enable = false;
-    nonInteractive = true;
-  };
+  # services.protonmail-bridge = {
+  #   enable = false;
+  #   nonInteractive = true;
+  # };
 
   programs.home-manager.enable = true;
 }

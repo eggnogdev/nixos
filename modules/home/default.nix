@@ -1,6 +1,6 @@
 {
   imports = [
-    ./protonmail-bridge.nix
+    # ./protonmail-bridge.nix
     ./sublime.nix
     ./vscodium.nix
   ];
