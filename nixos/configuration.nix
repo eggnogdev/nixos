@@ -122,6 +122,7 @@ in
 
   environment.systemPackages = with pkgs; [
     android-studio
+    anki
     bitwarden
     cargo
     chromium
@@ -185,12 +186,6 @@ in
     extraGroups = [];
     packages = with pkgs; [];
   };
-
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableExtensionPack = true;
-  };
-  users.extraGroups.vboxusers.members = [ "student" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
