@@ -21,13 +21,23 @@ in
   boot.initrd.luks.devices."luks-0edce6e9-b390-4f18-b860-f4bb1c3dc20f".device = "/dev/disk/by-uuid/0edce6e9-b390-4f18-b860-f4bb1c3dc20f";
 
   security.apparmor = {
-    enable = true;
+    enable = false;
     packages = with pkgs; [
       apparmor-profiles
     ];
   };
 
   networking.hostName = "teekannu"; 
+  
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 80 443 25565 ];
+    allowedUDPPorts = [ 25565 ];
+    allowedUDPPortRanges = [
+      { from = 4000; to = 4007; }
+      { from = 8000; to = 8010; }
+    ];
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -62,11 +72,12 @@ in
 
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
     xkb.layout = "us";
     xkb.variant = "dvorak";
   };
+
+  services.displayManager.sddm.enable = true;
 
   console.keyMap = "dvorak";
 
@@ -126,6 +137,7 @@ in
     bitwarden
     cargo
     chromium
+    dart
     firefox
     gcc
     gparted
@@ -140,6 +152,7 @@ in
     rustc
     rustdesk
     sublime4
+    tree
     vim
     wget
   ];
