@@ -73,12 +73,11 @@ in
   services.xserver = {
     enable = true;
     desktopManager.plasma5.enable = true;
-    displayManager.sddm.enable = true;
     xkb.layout = "us";
     xkb.variant = "dvorak";
   };
 
-  # services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
 
   console.keyMap = "dvorak";
 
