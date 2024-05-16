@@ -151,6 +151,7 @@ in
     python3
     rustc
     rustdesk
+    scrcpy
     sublime4
     tree
     vim
