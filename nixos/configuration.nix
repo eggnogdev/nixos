@@ -127,8 +127,11 @@ in
     };
   };
 
-  programs.java = {
+  programs.java.enable = true;
+
+  programs.wireshark = {
     enable = true;
+    package = pkgs.wireshark;
   };
 
   environment.systemPackages = with pkgs; [
@@ -188,7 +191,7 @@ in
     initialPassword = "1234";
     description = "daniel";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
     packages = with pkgs; [];
   };
 
