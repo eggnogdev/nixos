@@ -156,6 +156,7 @@ in
     rustdesk
     scrcpy
     sublime4
+    telegram-desktop
     tree
     vim
     wget
