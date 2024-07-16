@@ -152,6 +152,7 @@ in
     pciutils
     protonvpn-gui
     python3
+    qbittorrent
     rustc
     rustdesk
     scrcpy
