@@ -143,6 +143,7 @@ in
     dart
     firefox
     gcc
+    gnucash
     gparted
     kitty
     libreoffice
