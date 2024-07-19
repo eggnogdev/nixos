@@ -161,6 +161,7 @@ in
     telegram-desktop
     tree
     vim
+    vlc
     wget
   ];
 
