@@ -29,7 +29,7 @@ in
       userSettings = lib.mkOption {
         default = {
           "workbench.startupEditor" = "none";
-          "workbench.colorTheme" = "Dracula";
+          "workbench.colorTheme" = "Dracula Theme";
           "workbench.productIconTheme" = "material-product-icons";
           "window.zoomLevel" = 1;
           "editor.fontFamily" = "'fantasque sans mono', Menlo, Monaco, 'Courier New', monospace";
