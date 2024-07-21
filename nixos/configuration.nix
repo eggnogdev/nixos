@@ -151,6 +151,7 @@ in
     nvidia-system-monitor-qt
     obsidian
     pciutils
+    protonmail-desktop
     protonvpn-gui
     python3
     qbittorrent
