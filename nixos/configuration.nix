@@ -143,9 +143,11 @@ in
     dart
     firefox
     gcc
+    gnome.gnome-disk-utility
     gnucash
     gparted
     kitty
+    krita
     libreoffice
     neofetch
     nvidia-system-monitor-qt
@@ -164,6 +166,7 @@ in
     vim
     vlc
     wget
+    xclicker
   ];
 
   ###
