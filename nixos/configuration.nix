@@ -83,7 +83,6 @@ in
 
   services.printing.enable = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -96,10 +95,9 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   services.xserver.videoDrivers = ["nvidia"];
@@ -143,7 +141,7 @@ in
     dart
     firefox
     gcc
-    gnome.gnome-disk-utility
+    gnome-disk-utility
     gnucash
     gparted
     kitty
