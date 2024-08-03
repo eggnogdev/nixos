@@ -144,6 +144,7 @@ in
     gnome-disk-utility
     gnucash
     gparted
+    gpodder
     kitty
     krita
     libreoffice
