@@ -148,6 +148,7 @@ in
     kitty
     krita
     libreoffice
+    monero-gui
     neofetch
     nvidia-system-monitor-qt
     obsidian
