@@ -136,6 +136,7 @@ in
     android-studio
     anki
     bitwarden
+    bleachbit
     cargo
     chromium
     dart
@@ -145,8 +146,8 @@ in
     gnucash
     gparted
     gpodder
+    keepassxc
     kitty
-    krita
     libreoffice
     monero-gui
     neofetch
@@ -163,6 +164,7 @@ in
     sublime4
     telegram-desktop
     tree
+    veracrypt
     vim
     vlc
     wget
@@ -187,6 +189,11 @@ in
   services.syncthing = {
     enable = true;
     user = "syncthing";
+  };
+
+  services.clamav = {
+    daemon.enable = true;
+    updater.enable = true;
   };
 
   home-manager.users = {
