@@ -153,6 +153,7 @@ in
     neofetch
     nvidia-system-monitor-qt
     obsidian
+    p2pool
     pciutils
     protonmail-desktop
     protonvpn-gui
@@ -194,6 +195,26 @@ in
   services.clamav = {
     daemon.enable = true;
     updater.enable = true;
+  };
+
+  services.xmrig = {
+    enable = false;
+    settings = {
+      autosave = true;
+      cpu = true;
+      opencl = false;
+      cuda = false;
+      donate-level = 0;
+      donate-over-proxy = 0;
+      pools = [
+        {
+          url = "pool.supportxmr.com:443";
+          user = "47k4baqP6fpSBvaW9mrfvnCWL9hm19W39TQavbwhwHdp2QHcm9cYYsX9FL77vkKNBdj9XMSbDvgGcRYWUW1QcdeWU1KsGPg";
+          keepalive = true;
+          tls = true;
+        }
+      ];
+    };
   };
 
   home-manager.users = {
