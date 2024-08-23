@@ -164,6 +164,7 @@ in
     scrcpy
     sublime4
     telegram-desktop
+    tor-browser
     tree
     veracrypt
     vim
@@ -185,16 +186,16 @@ in
     fantasque-sans-mono
   ];
   
+  services.clamav = {
+    daemon.enable = true;
+    updater.enable = true;
+  };
+
   services.openssh.enable = true;
 
   services.syncthing = {
     enable = true;
     user = "syncthing";
-  };
-
-  services.clamav = {
-    daemon.enable = true;
-    updater.enable = true;
   };
 
   services.xmrig = {
