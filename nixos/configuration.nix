@@ -135,6 +135,7 @@ in
   environment.systemPackages = with pkgs; [
     android-studio
     anki
+    authenticator
     bitwarden
     bleachbit
     cargo
