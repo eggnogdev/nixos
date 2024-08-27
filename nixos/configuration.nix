@@ -147,6 +147,7 @@ in
     gnucash
     gparted
     gpodder
+    josm
     keepassxc
     kitty
     libreoffice
