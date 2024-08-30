@@ -161,8 +161,6 @@ in
     protonvpn-gui
     python3
     qbittorrent
-    rustc
-    rustdesk
     scrcpy
     sublime4
     telegram-desktop
