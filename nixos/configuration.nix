@@ -228,7 +228,12 @@ in
     initialPassword = "1234";
     description = "daniel";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "wireshark"
+      "syncthing"
+    ];
     packages = with pkgs; [];
   };
 
