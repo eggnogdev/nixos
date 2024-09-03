@@ -149,6 +149,7 @@ in
     gpodder
     josm
     keepassxc
+    keychain
     kitty
     libreoffice
     monero-gui
@@ -157,6 +158,7 @@ in
     obsidian
     p2pool
     pciutils
+    pencil
     protonmail-desktop
     protonvpn-gui
     python3
