@@ -242,7 +242,7 @@ in
     initialPassword = "1234";
     description = "student";
     shell = pkgs.fish;
-    extraGroups = [];
+    extraGroups = [ "syncthing" ];
     packages = with pkgs; [];
   };
 
