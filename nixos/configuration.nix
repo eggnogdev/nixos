@@ -158,7 +158,6 @@ in
     obsidian
     p2pool
     pciutils
-    pencil
     protonmail-desktop
     protonvpn-gui
     python3
