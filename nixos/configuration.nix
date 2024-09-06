@@ -141,6 +141,7 @@ in
     cargo
     chromium
     dart
+    exiftool
     firefox
     gcc
     gnome-disk-utility
