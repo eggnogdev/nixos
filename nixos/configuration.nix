@@ -49,7 +49,7 @@ in
   nix.gc = {
     automatic = true;
     dates = "daily";
-    options = "--delete-older-than 7d";
+    options = "--delete-older-than 3d";
   };
 
   networking.networkmanager.enable = true;
@@ -116,6 +116,8 @@ in
 
   nixpkgs.config.nvidia.acceptLicense = true;
 
+  programs.adb.enable = true;
+
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -136,22 +138,15 @@ in
     android-studio
     anki
     authenticator
-    bitwarden
-    bleachbit
     cargo
     chromium
-    dart
     exiftool
     firefox
     gcc
     gnome-disk-utility
     gnucash
-    gparted
-    gpodder
-    josm
     keepassxc
     keychain
-    kitty
     libreoffice
     monero-gui
     neofetch
@@ -163,7 +158,7 @@ in
     protonvpn-gui
     python3
     qbittorrent
-    scrcpy
+    rpi-imager
     sublime4
     telegram-desktop
     tor-browser
@@ -235,6 +230,7 @@ in
       "wheel"
       "wireshark"
       "syncthing"
+      "adbusers"
     ];
     packages = with pkgs; [];
   };

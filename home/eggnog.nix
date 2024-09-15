@@ -14,13 +14,11 @@
 
   home.packages = with pkgs; [
     discord
-    osu-lazer-bin
     prismlauncher
     signal-desktop
     steam
     sublime-merge
-    thunderbird
-    woeusb # create bootable USB disks from Windows ISO images
+    # woeusb # create bootable USB disks from Windows ISO images
   ];
 
   home.file = {};

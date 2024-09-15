@@ -22,6 +22,7 @@ in
           ms-python.python
           rust-lang.rust-analyzer
           esbenp.prettier-vscode
+          jnoortheen.nix-ide
         ];
         description = "List of extension packages to use";
       };
