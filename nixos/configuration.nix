@@ -145,6 +145,7 @@ in
     gcc
     gnome-disk-utility
     gnucash
+    inkscape
     keepassxc
     keychain
     libreoffice
