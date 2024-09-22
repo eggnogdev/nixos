@@ -125,6 +125,13 @@ in
       cd-ssd="cd ${ssd-path}";
       nix-flutter="nix develop /etc/nixos/flutter/";
     };
+    interactiveShellInit = "";
+  };
+
+  programs.bash = {
+    shellAliases = {
+      ll="ls -l";
+    };
   };
 
   programs.java.enable = true;
@@ -225,7 +232,7 @@ in
     isNormalUser = true;
     initialPassword = "1234";
     description = "daniel";
-    shell = pkgs.fish;
+    shell = pkgs.bash;
     extraGroups = [
       "networkmanager"
       "wheel"
