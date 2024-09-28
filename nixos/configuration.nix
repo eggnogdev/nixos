@@ -167,6 +167,7 @@ in
     python3
     qbittorrent
     rpi-imager
+    rustc
     sublime4
     telegram-desktop
     tor-browser
