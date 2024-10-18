@@ -144,6 +144,7 @@ in
   environment.systemPackages = with pkgs; [
     android-studio
     anki
+    anytype
     authenticator
     cargo
     chromium
