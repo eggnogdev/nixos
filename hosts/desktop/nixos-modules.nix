@@ -2,9 +2,14 @@
 
 {
   imports = [
+    ../../modules/nixos/cliutils
     ../../modules/nixos/texteditors
     ../../modules/nixos/browsers
   ];
+
+  programs.cliutils = {
+    neofetch.enable = true;
+  };
 
   programs.texteditors = {
     sublime-text.enable = true;
