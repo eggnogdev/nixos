@@ -5,6 +5,7 @@
     ../../modules/nixos/cliutils
     ../../modules/nixos/texteditors
     ../../modules/nixos/browsers
+    ../../modules/nixos/office
   ];
 
   programs.cliutils = {
@@ -23,5 +24,9 @@
     firefox.enable = true;
     chromium.enable = true;
     tor-browser.enable = true;
+  };
+
+  programs.office = {
+    gnucash.enable = true;
   };
 }
