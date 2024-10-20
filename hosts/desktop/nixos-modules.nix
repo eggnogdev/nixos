@@ -13,6 +13,7 @@
   };
 
   programs.texteditors = {
+    android-studio.enable = true;
     sublime-text.enable = true;
     vim.enable = true;
   };
