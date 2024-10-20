@@ -2,13 +2,7 @@
 
 {
   imports = [
-    ../../modules/nixos/cliutils
-    ../../modules/nixos/texteditors
-    ../../modules/nixos/browsers
-    ../../modules/nixos/office
-    ../../modules/nixos/infosec
-    ../../modules/nixos/communication
-    ../../modules/nixos/git
+    ../../modules/nixos
   ];
 
   programs.cliutils = {
