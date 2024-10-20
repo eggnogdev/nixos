@@ -59,6 +59,10 @@
     pciutils.enable = true;
     qbittorrent.enable = true;
     rpi-imager.enable = true;
+    virtualbox = {
+      enable = true;
+      authorizedUsers = [ "testnixos" ];
+    };
     vlc.enable = true;
     xclicker.enable = true;
   };
