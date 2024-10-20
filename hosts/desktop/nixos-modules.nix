@@ -9,6 +9,7 @@
     exiftool.enable = true;
     neofetch.enable = true;
     tree.enable = true;
+    wget.enable = true;
   };
 
   programs.texteditors = {
