@@ -9,6 +9,7 @@
 
   programs.cliutils = {
     neofetch.enable = true;
+    tree.enable = true;
   };
 
   programs.texteditors = {
