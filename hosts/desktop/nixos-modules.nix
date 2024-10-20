@@ -6,6 +6,7 @@
     ../../modules/nixos/texteditors
     ../../modules/nixos/browsers
     ../../modules/nixos/office
+    ../../modules/nixos/infosec
   ];
 
   programs.cliutils = {
@@ -31,5 +32,11 @@
     gnucash.enable = true;
     libreoffice.enable = true;
     protonmail.enable = true;
+  };
+
+  programs.infosec = {
+    keepassxc.enable = true;
+    protonvpn.enable = true;
+    veracrypt.enable = true;
   };
 }
