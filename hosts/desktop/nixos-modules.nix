@@ -13,5 +13,6 @@
   programs.browsers = {
     firefox.enable = true;
     chromium.enable = true;
+    tor-browser.enable = true;
   };
 }
