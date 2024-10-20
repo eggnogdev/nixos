@@ -14,6 +14,7 @@
 
   programs.texteditors = {
     sublime-text.enable = true;
+    vim.enable = true;
   };
 
   programs.browsers = {
