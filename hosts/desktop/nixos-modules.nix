@@ -30,5 +30,6 @@
     anytype.enable = true;
     gnucash.enable = true;
     libreoffice.enable = true;
+    protonmail.enable = true;
   };
 }
