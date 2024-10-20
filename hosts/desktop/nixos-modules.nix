@@ -7,6 +7,7 @@
     ../../modules/nixos/browsers
     ../../modules/nixos/office
     ../../modules/nixos/infosec
+    ../../modules/nixos/communication
   ];
 
   programs.cliutils = {
@@ -38,5 +39,10 @@
     keepassxc.enable = true;
     protonvpn.enable = true;
     veracrypt.enable = true;
+  };
+
+  programs.communication = {
+    signal.enable = true;
+    telegram.enable = true;
   };
 }
