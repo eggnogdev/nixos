@@ -6,8 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix # include the results of the hardware scan.
       ./nixos-modules.nix # import all system wide configs
     ];
 
