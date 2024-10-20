@@ -8,6 +8,7 @@
     ../../modules/nixos/office
     ../../modules/nixos/infosec
     ../../modules/nixos/communication
+    ../../modules/nixos/git
   ];
 
   programs.cliutils = {
@@ -44,5 +45,10 @@
   programs.communication = {
     signal.enable = true;
     telegram.enable = true;
+  };
+
+  programs.git = {
+    git.enable = true;
+    sublime-merge.enable = true;
   };
 }
