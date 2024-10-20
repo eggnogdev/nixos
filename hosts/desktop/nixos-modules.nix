@@ -27,6 +27,7 @@
   };
 
   programs.office = {
+    anytype.enable = true;
     gnucash.enable = true;
   };
 }
