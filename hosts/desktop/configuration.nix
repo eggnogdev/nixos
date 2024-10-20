@@ -35,15 +35,6 @@
     LC_TIME = "fi_FI.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "dvorak";
-  };
-
-  # Configure console keymap
-  console.keyMap = "dvorak";
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

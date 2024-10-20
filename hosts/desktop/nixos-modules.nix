@@ -7,6 +7,11 @@
 
   system.desktopEnvironment.plasma5.enable = true;
 
+  system.keyboard = {
+    layout = "us";
+    variant = "dvorak";
+  };
+
   programs.cliutils = {
     exiftool.enable = true;
     neofetch.enable = true;

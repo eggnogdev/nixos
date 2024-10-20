@@ -7,6 +7,7 @@
 		./games
 		./git
 		./infosec
+		./keyboard
 		./office
 		./shells
 		./texteditors
