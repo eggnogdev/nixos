@@ -5,7 +5,7 @@
     ../../modules/nixos
   ];
 
-  system.desktopEnvironment.gnome.enable = true;
+  system.desktopEnvironment.plasma5.enable = true;
 
   programs.cliutils = {
     exiftool.enable = true;
