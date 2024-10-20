@@ -8,6 +8,7 @@
   ];
 
   programs.cliutils = {
+    exiftool.enable = true;
     neofetch.enable = true;
     tree.enable = true;
   };
