@@ -66,4 +66,13 @@
     vlc.enable = true;
     xclicker.enable = true;
   };
+
+  programs.shells = {
+    bash = {
+      aliases = {
+        ll = "ls -l";
+        lla = "ls -la";
+      };
+    };
+  };
 }

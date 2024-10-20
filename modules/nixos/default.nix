@@ -7,6 +7,7 @@
 		./git
 		./infosec
 		./office
+		./shells
 		./texteditors
 		./utils
 	];
