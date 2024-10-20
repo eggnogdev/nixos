@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -15,6 +15,7 @@
     android-studio.enable = true;
     sublime-text.enable = true;
     vim.enable = true;
+    vscodium.enable = true;
   };
 
   programs.browsers = {
