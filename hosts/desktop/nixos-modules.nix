@@ -5,6 +5,8 @@
     ../../modules/nixos
   ];
 
+  system.desktopEnvironment.gnome.enable = true;
+
   programs.cliutils = {
     exiftool.enable = true;
     neofetch.enable = true;
