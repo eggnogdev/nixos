@@ -3,6 +3,7 @@
 		./browsers
 		./cliutils
 		./communication
+		./games
 		./git
 		./infosec
 		./office
