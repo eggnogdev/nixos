@@ -51,4 +51,14 @@
     prismlauncher.enable = true;
     steam.enable = true;
   };
+
+  programs.utils = {
+    gnomediskutil.enable = true;
+    keychain.enable = true;
+    pciutils.enable = true;
+    qbittorrent.enable = true;
+    rpi-imager.enable = true;
+    vlc.enable = true;
+    xclicker.enable = true;
+  };
 }

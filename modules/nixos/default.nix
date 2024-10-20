@@ -8,5 +8,6 @@
 		./infosec
 		./office
 		./texteditors
+		./utils
 	];
 }
