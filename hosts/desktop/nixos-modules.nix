@@ -6,7 +6,9 @@
     ../../modules/nixos/browsers
   ];
 
-  programs.sublime-text.enable = true;
+  programs.texteditors = {
+    sublime-text.enable = true;
+  };
 
   programs.browsers = {
     firefox.enable = true;
