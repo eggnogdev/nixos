@@ -167,6 +167,7 @@ in
     protonvpn-gui
     python3
     qbittorrent
+    raven-reader
     rpi-imager
     rustc
     sublime4
