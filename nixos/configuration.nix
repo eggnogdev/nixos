@@ -74,12 +74,12 @@ in
     enable = true;
     desktopManager.plasma5.enable = true;
     xkb.layout = "us";
-    xkb.variant = "dvorak";
+    # xkb.variant = "dvorak";
   };
 
   services.displayManager.sddm.enable = true;
 
-  console.keyMap = "dvorak";
+  # console.keyMap = "dvorak";
 
   services.printing.enable = true;
 
