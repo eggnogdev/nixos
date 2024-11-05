@@ -158,11 +158,13 @@ in
     keychain
     libreoffice
     monero-gui
+    mongodb-compass
     neofetch
     nvidia-system-monitor-qt
     obsidian
     p2pool
     pciutils
+    postman
     protonmail-desktop
     protonvpn-gui
     python3
