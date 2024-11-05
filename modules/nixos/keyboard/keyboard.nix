@@ -15,7 +15,7 @@ in
 
 			variant = lib.mkOption {
 				type = lib.types.str;
-				default = "us";
+				default = "";
 				description = "Keyboard layout variant";
 				example = "dvorak";
 			};
@@ -28,6 +28,6 @@ in
 			variant = cfg.variant;
 		};
 
-		console.keyMap = cfg.variant;
+		console.keyMap = lib.mkIf (cfg.variant != "") cfg.variant;
 	};
 }
