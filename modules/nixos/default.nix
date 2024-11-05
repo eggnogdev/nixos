@@ -4,6 +4,7 @@
 		./cliutils
 		./communication
 		./desktop-environments
+		./devutils
 		./games
 		./git
 		./infosec

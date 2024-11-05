@@ -26,6 +26,11 @@
     vscodium.enable = true;
   };
 
+  programs.devutils = {
+    mongodb-compass.enable = true;
+    postman.enable = true;
+  };
+
   programs.browsers = {
     firefox.enable = true;
     chromium.enable = true;
