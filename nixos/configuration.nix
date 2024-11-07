@@ -174,6 +174,7 @@ in
     rustc
     sublime4
     telegram-desktop
+    thunderbird
     tor-browser
     tree
     veracrypt
