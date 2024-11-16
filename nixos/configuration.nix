@@ -162,6 +162,7 @@ in
     neofetch
     nvidia-system-monitor-qt
     obsidian
+    obs-studio
     p2pool
     pciutils
     postman
@@ -172,6 +173,7 @@ in
     raven-reader
     rpi-imager
     rustc
+    shotcut
     sublime4
     telegram-desktop
     thunderbird
