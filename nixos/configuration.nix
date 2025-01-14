@@ -150,12 +150,15 @@ in
     chromium
     exiftool
     firefox
+    freecad
     gcc
+    gimp
     gnome-disk-utility
     gnucash
     inkscape
     keepassxc
     keychain
+    kid3
     libreoffice
     monero-gui
     mongodb-compass
@@ -163,17 +166,20 @@ in
     nvidia-system-monitor-qt
     obsidian
     obs-studio
+    orca-slicer
     p2pool
     pciutils
     postman
     protonmail-desktop
     protonvpn-gui
+    prusa-slicer
     python3
     qbittorrent
     raven-reader
     rpi-imager
     rustc
     shotcut
+    strawberry
     sublime4
     telegram-desktop
     thunderbird
