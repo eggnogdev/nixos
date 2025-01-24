@@ -4,5 +4,6 @@
 		./gnucash.nix
 		./libreoffice.nix
 		./protonmail.nix
+		./thunderbird.nix
 	];
 }

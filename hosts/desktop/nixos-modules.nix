@@ -42,6 +42,7 @@
     gnucash.enable = true;
     libreoffice.enable = true;
     protonmail.enable = true;
+    thunderbird.enable = true;
   };
 
   programs.infosec = {
