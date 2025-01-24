@@ -12,5 +12,6 @@
 		./office
 		./shells
 		./utils
+		./video
 	];
 }

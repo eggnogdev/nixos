@@ -75,7 +75,6 @@
       enable = true;
       authorizedUsers = [ "testnixos" ];
     };
-    vlc.enable = true;
     xclicker.enable = true;
   };
 
@@ -86,5 +85,10 @@
         lla = "ls -la";
       };
     };
+  };
+
+  programs.video = {
+    obs-studio.enable = true;
+    vlc.enable = true;
   };
 }

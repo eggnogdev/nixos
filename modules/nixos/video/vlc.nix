@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.utils.vlc;
+	cfg = config.programs.video.vlc;
 in
 {
 	options = {
-		programs.utils.vlc = {
+		programs.video.vlc = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;
