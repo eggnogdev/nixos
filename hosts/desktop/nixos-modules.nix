@@ -19,6 +19,12 @@
     wget.enable = true;
   };
 
+  programs.design = {
+    # freecad.enable = true;
+    # gimp.enable = true;
+    # prusa-slicer.enable = true;
+  };
+
   programs.developer = {
     # android-studio.enable = true;
     git.enable = true;

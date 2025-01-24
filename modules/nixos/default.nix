@@ -3,6 +3,7 @@
 		./browsers
 		./cliutils
 		./communication
+		./design
 		./desktop-environments
 		./developer
 		./games
