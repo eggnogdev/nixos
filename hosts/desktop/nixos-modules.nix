@@ -13,33 +13,33 @@
   };
 
   programs.cliutils = {
-    # exiftool.enable = true;
+    exiftool.enable = true;
     neofetch.enable = true;
     tree.enable = true;
     wget.enable = true;
   };
 
   programs.design = {
-    # freecad.enable = true;
+    freecad.enable = true;
     # gimp.enable = true;
-    # prusa-slicer.enable = true;
+    prusa-slicer.enable = true;
   };
 
   programs.developer = {
-    # android-studio.enable = true;
+    android-studio.enable = true;
     git.enable = true;
     # mongodb-compass.enable = true;
     # postman.enable = true;
     sublime-merge.enable = true;
     sublime-text.enable = true;
     vim.enable = true;
-    # vscodium.enable = true;
+    vscodium.enable = true;
   };
 
   programs.browsers = {
     firefox.enable = true;
     # chromium.enable = true;
-    # tor-browser.enable = true;
+    tor-browser.enable = true;
   };
 
   programs.office = {
