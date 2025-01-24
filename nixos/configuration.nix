@@ -28,6 +28,11 @@ in
   };
 
   networking.hostName = "teekannu"; 
+
+  networking.extraHosts = 
+    ''
+      195.148.21.183 ff-vm-1
+    '';
   
   networking.firewall = {
     enable = true;
