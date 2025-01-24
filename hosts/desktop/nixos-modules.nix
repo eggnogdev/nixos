@@ -9,7 +9,7 @@
 
   system.keyboard = {
     layout = "us";
-    variant = "dvorak";
+    # variant = "dvorak";
   };
 
   programs.cliutils = {
