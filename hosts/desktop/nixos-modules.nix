@@ -55,11 +55,6 @@
     telegram.enable = true;
   };
 
-  programs.git = {
-    git.enable = true;
-    sublime-merge.enable = true;
-  };
-
   programs.games = {
     prismlauncher.enable = true;
     steam.enable = true;

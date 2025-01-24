@@ -6,7 +6,6 @@
 		./qbittorrent.nix
 		./rpi-imager.nix
 		./virtualbox.nix
-		./vlc.nix
 		./xclicker.nix
 	];
 }

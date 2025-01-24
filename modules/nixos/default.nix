@@ -6,7 +6,6 @@
 		./desktop-environments
 		./developer
 		./games
-		./git
 		./infosec
 		./keyboard
 		./office
