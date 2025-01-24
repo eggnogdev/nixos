@@ -8,7 +8,7 @@
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
         ];
