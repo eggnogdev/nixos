@@ -13,35 +13,35 @@
   };
 
   programs.cliutils = {
-    exiftool.enable = true;
+    # exiftool.enable = true;
     neofetch.enable = true;
     tree.enable = true;
     wget.enable = true;
   };
 
   programs.developer = {
-    android-studio.enable = true;
+    # android-studio.enable = true;
     git.enable = true;
-    mongodb-compass.enable = true;
-    postman.enable = true;
+    # mongodb-compass.enable = true;
+    # postman.enable = true;
     sublime-merge.enable = true;
     sublime-text.enable = true;
     vim.enable = true;
-    vscodium.enable = true;
+    # vscodium.enable = true;
   };
 
   programs.browsers = {
     firefox.enable = true;
-    chromium.enable = true;
-    tor-browser.enable = true;
+    # chromium.enable = true;
+    # tor-browser.enable = true;
   };
 
   programs.office = {
-    anytype.enable = true;
-    gnucash.enable = true;
+    # anytype.enable = true;
+    # gnucash.enable = true;
     libreoffice.enable = true;
     protonmail.enable = true;
-    thunderbird.enable = true;
+    # thunderbird.enable = true;
   };
 
   programs.infosec = {
@@ -52,7 +52,7 @@
 
   programs.communication = {
     signal.enable = true;
-    telegram.enable = true;
+    # telegram.enable = true;
   };
 
   programs.games = {
@@ -65,7 +65,7 @@
     keychain.enable = true;
     pciutils.enable = true;
     qbittorrent.enable = true;
-    rpi-imager.enable = true;
+    # rpi-imager.enable = true;
     virtualbox = {
       enable = true;
       authorizedUsers = [ "testnixos" ];
@@ -83,7 +83,7 @@
   };
 
   programs.video = {
-    obs-studio.enable = true;
+    # obs-studio.enable = true;
     vlc.enable = true;
   };
 }
