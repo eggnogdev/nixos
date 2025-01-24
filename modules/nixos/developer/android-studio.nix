@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.texteditors.android-studio;
+	cfg = config.programs.developer.android-studio;
 in
 {
 	options = {
-		programs.texteditors.android-studio = {
+		programs.developer.android-studio = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;

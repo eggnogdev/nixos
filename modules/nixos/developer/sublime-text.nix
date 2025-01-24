@@ -1,11 +1,11 @@
 { config, lib, pkgs, nixpkgs, ... }:
 
 let
-  cfg = config.programs.texteditors.sublime-text;
+  cfg = config.programs.developer.sublime-text;
 in
 {
   options = {
-    programs.texteditors.sublime-text = {
+    programs.developer.sublime-text = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;

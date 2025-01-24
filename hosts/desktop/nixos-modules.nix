@@ -19,16 +19,15 @@
     wget.enable = true;
   };
 
-  programs.texteditors = {
+  programs.developer = {
     android-studio.enable = true;
+    git.enable = true;
+    mongodb-compass.enable = true;
+    postman.enable = true;
+    sublime-merge.enable = true;
     sublime-text.enable = true;
     vim.enable = true;
     vscodium.enable = true;
-  };
-
-  programs.devutils = {
-    mongodb-compass.enable = true;
-    postman.enable = true;
   };
 
   programs.browsers = {

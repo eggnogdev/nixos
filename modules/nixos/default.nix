@@ -4,14 +4,13 @@
 		./cliutils
 		./communication
 		./desktop-environments
-		./devutils
+		./developer
 		./games
 		./git
 		./infosec
 		./keyboard
 		./office
 		./shells
-		./texteditors
 		./utils
 	];
 }

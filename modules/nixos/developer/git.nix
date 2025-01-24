@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.texteditors.vscodium;
+	cfg = config.programs.developer.git;
 in
 {
 	options = {
-		programs.texteditors.vscodium = {
+		programs.developer.git = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;
-				description = "Enable VSCodium";
+				description = "Enable Git";
 			};
 		};
 	};
 
 	config = lib.mkIf cfg.enable {
 		environment.systemPackages = with pkgs; [
-			vscodium
+			git
 		];
 	};
 }

@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.devutils.postman;
+	cfg = config.programs.developer.sublime-merge;
 in
 {
 	options = {
-		programs.devutils.postman = {
+		programs.developer.sublime-merge = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;
-				description = "Enable Postman";
+				description = "Enable Sublime Merge";
 			};
 		};
 	};
 
 	config = lib.mkIf cfg.enable {
 		environment.systemPackages = with pkgs; [
-			postman
+			sublime-merge
 		];
 	};
 }
