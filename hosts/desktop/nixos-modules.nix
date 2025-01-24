@@ -74,8 +74,9 @@
     # rpi-imager.enable = true;
     virtualbox = {
       enable = true;
-      authorizedUsers = [ "testnixos" ];
+      authorizedUsers = [ "eggnog" ];
     };
+
     xclicker.enable = true;
   };
 
