@@ -6,6 +6,7 @@
 		./design
 		./desktop-environments
 		./developer
+		./fonts
 		./games
 		./infosec
 		./keyboard
