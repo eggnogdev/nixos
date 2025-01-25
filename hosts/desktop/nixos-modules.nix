@@ -26,6 +26,7 @@
   programs.design = {
     freecad.enable = true;
     # gimp.enable = true;
+    orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
 
