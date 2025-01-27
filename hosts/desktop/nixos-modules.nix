@@ -23,10 +23,15 @@
     wget.enable = true;
   };
 
+  programs.communication = {
+    signal.enable = true;
+    # telegram.enable = true;
+  };
+
   programs.design = {
     freecad.enable = true;
     # gimp.enable = true;
-    orca-slicer.enable = true;
+    # orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
 
@@ -59,11 +64,6 @@
     keepassxc.enable = true;
     protonvpn.enable = true;
     veracrypt.enable = true;
-  };
-
-  programs.communication = {
-    signal.enable = true;
-    # telegram.enable = true;
   };
 
   programs.games = {
