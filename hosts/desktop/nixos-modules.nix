@@ -46,6 +46,10 @@
     vscodium.enable = true;
   };
 
+  programs.education = {
+    anki.enable = true;
+  };
+
   programs.browsers = {
     firefox.enable = true;
     # chromium.enable = true;
