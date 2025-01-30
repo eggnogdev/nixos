@@ -6,6 +6,7 @@
 		./design
 		./desktop-environments
 		./developer
+		./education
 		./fonts
 		./games
 		./infosec
