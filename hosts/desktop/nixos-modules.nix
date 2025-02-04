@@ -24,8 +24,15 @@
   };
 
   programs.communication = {
+    discord.enable = true;
     signal.enable = true;
     # telegram.enable = true;
+  };
+
+  programs.browsers = {
+    firefox.enable = true;
+    chromium.enable = true;
+    tor-browser.enable = true;
   };
 
   programs.design = {
@@ -48,12 +55,6 @@
 
   programs.education = {
     anki.enable = true;
-  };
-
-  programs.browsers = {
-    firefox.enable = true;
-    # chromium.enable = true;
-    tor-browser.enable = true;
   };
 
   programs.office = {
