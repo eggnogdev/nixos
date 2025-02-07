@@ -12,6 +12,14 @@
     # variant = "dvorak";
   };
 
+  fonts = {
+    fantasque-sans-mono.enable = true;
+  };
+
+  programs.audio = {
+    strawberry.enable = true;
+  };
+
   programs.cliutils = {
     exiftool.enable = true;
     neofetch.enable = true;
@@ -19,9 +27,22 @@
     wget.enable = true;
   };
 
+  programs.communication = {
+    discord.enable = true;
+    signal.enable = true;
+    # telegram.enable = true;
+  };
+
+  programs.browsers = {
+    firefox.enable = true;
+    chromium.enable = true;
+    tor-browser.enable = true;
+  };
+
   programs.design = {
     freecad.enable = true;
     # gimp.enable = true;
+    # orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
 
@@ -36,10 +57,8 @@
     vscodium.enable = true;
   };
 
-  programs.browsers = {
-    firefox.enable = true;
-    # chromium.enable = true;
-    tor-browser.enable = true;
+  programs.education = {
+    anki.enable = true;
   };
 
   programs.office = {
@@ -56,11 +75,6 @@
     veracrypt.enable = true;
   };
 
-  programs.communication = {
-    signal.enable = true;
-    # telegram.enable = true;
-  };
-
   programs.games = {
     prismlauncher.enable = true;
     steam.enable = true;
@@ -69,14 +83,15 @@
   programs.utils = {
     gnomediskutil.enable = true;
     keychain.enable = true;
-    ollama.enable = true;
+    # ollama.enable = true;
     pciutils.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
     virtualbox = {
       enable = true;
-      authorizedUsers = [ "testnixos" ];
+      authorizedUsers = [ "eggnog" ];
     };
+
     xclicker.enable = true;
   };
 
