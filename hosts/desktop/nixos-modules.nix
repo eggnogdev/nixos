@@ -79,7 +79,7 @@
   programs.utils = {
     gnomediskutil.enable = true;
     keychain.enable = true;
-    ollama.enable = true;
+    # ollama.enable = true;
     pciutils.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
