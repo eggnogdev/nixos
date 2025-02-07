@@ -16,6 +16,10 @@
     fantasque-sans-mono.enable = true;
   };
 
+  programs.audio = {
+    strawberry.enable = true;
+  };
+
   programs.cliutils = {
     exiftool.enable = true;
     neofetch.enable = true;
