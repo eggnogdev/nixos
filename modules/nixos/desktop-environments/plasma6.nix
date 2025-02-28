@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.system.desktopEnvironment.plasma5;
+  cfg = config.system.desktopEnvironment.plasma6;
 in
 {
   options = {
-    system.desktopEnvironment.plasma5 = {
+    system.desktopEnvironment.plasma6 = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
