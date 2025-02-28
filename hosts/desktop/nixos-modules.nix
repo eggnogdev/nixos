@@ -5,7 +5,7 @@
     ../../modules/nixos
   ];
 
-  system.desktopEnvironment.plasma5.enable = true;
+  system.desktopEnvironment.plasma6.enable = true;
 
   system.keyboard = {
     layout = "us";
