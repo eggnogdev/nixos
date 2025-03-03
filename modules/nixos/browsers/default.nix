@@ -1,7 +1,8 @@
 {
 	imports = [
-		./firefox.nix
 		./chromium.nix
+		./firefox.nix
+		./mullvad-browser.nix
 		./tor-browser.nix
 	];
 }
