@@ -34,8 +34,9 @@
   };
 
   programs.browsers = {
-    firefox.enable = true;
     chromium.enable = true;
+    firefox.enable = true;
+    mullvad-browser.enable = true;
     tor-browser.enable = true;
   };
 
