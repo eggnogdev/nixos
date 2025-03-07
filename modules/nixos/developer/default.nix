@@ -1,7 +1,7 @@
 {
 	imports = [
 		./android-studio.nix
-		./docker-compose.nix
+		./docker.nix
 		./git.nix
 		./mongodb-compass.nix
 		./postman.nix
