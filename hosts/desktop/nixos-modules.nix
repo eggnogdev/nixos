@@ -91,6 +91,7 @@
     pciutils.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
+    solaar.enable = true;
     virtualbox = {
       enable = true;
       authorizedUsers = [ "eggnog" ];

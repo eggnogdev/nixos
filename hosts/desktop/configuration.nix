@@ -91,6 +91,8 @@
     enable32Bit = true;
   };
 
+  hardware.logitech.wireless.enable = true;
+
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
