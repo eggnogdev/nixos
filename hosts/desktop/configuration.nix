@@ -37,6 +37,21 @@
       '';
 
     firewall.enable = true;
+
+    # wireguard VPN configurations
+    wg-quick.interfaces = {
+      # ProtonVPN FI#13
+      fi-13 = {
+        autostart = false;
+        configFile = "/etc/wireguard/FI-13.conf";
+      };
+
+      # ProtonVPN FI#35
+      fi-35 = {
+        autostart = false;
+        configFile = "/etc/wireguard/FI-35.conf";
+      };
+    };
   };
 
   time.timeZone = "Europe/Helsinki";
