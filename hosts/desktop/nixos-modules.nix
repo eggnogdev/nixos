@@ -74,7 +74,7 @@
 
   programs.infosec = {
     keepassxc.enable = true;
-    protonvpn.enable = true;
+    # protonvpn.enable = true;
     veracrypt.enable = true;
     wireguard.enable = true;
   };
