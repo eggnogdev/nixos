@@ -5,11 +5,19 @@
     ../../modules/nixos
   ];
 
-  system.desktopEnvironment.plasma5.enable = true;
+  system.desktopEnvironment.plasma6.enable = true;
 
   system.keyboard = {
     layout = "us";
     # variant = "dvorak";
+  };
+
+  fonts = {
+    fantasque-sans-mono.enable = true;
+  };
+
+  programs.audio = {
+    strawberry.enable = true;
   };
 
   programs.cliutils = {
@@ -19,14 +27,30 @@
     wget.enable = true;
   };
 
+  programs.communication = {
+    discord.enable = true;
+    signal.enable = true;
+    # telegram.enable = true;
+  };
+
+  programs.browsers = {
+    chromium.enable = true;
+    firefox.enable = true;
+    mullvad-browser.enable = true;
+    tor-browser.enable = true;
+  };
+
   programs.design = {
     freecad.enable = true;
-    # gimp.enable = true;
+    gimp.enable = true;
+    krita.enable = true;
+    # orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
 
   programs.developer = {
     android-studio.enable = true;
+    docker.enable = true;
     git.enable = true;
     # mongodb-compass.enable = true;
     # postman.enable = true;
@@ -36,10 +60,8 @@
     vscodium.enable = true;
   };
 
-  programs.browsers = {
-    firefox.enable = true;
-    # chromium.enable = true;
-    tor-browser.enable = true;
+  programs.education = {
+    anki.enable = true;
   };
 
   programs.office = {
@@ -54,11 +76,7 @@
     keepassxc.enable = true;
     protonvpn.enable = true;
     veracrypt.enable = true;
-  };
-
-  programs.communication = {
-    signal.enable = true;
-    # telegram.enable = true;
+    wireguard.enable = true;
   };
 
   programs.games = {
@@ -69,13 +87,15 @@
   programs.utils = {
     gnomediskutil.enable = true;
     keychain.enable = true;
+    # ollama.enable = true;
     pciutils.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
     virtualbox = {
       enable = true;
-      authorizedUsers = [ "testnixos" ];
+      authorizedUsers = [ "eggnog" ];
     };
+
     xclicker.enable = true;
   };
 

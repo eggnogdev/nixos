@@ -1,11 +1,14 @@
 {
 	imports = [
+		./audio
 		./browsers
 		./cliutils
 		./communication
 		./design
 		./desktop-environments
 		./developer
+		./education
+		./fonts
 		./games
 		./infosec
 		./keyboard
