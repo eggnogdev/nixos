@@ -42,7 +42,7 @@
     wg-quick.interfaces = {
       # ProtonVPN FI#13
       fi-13 = {
-        autostart = false;
+        autostart = true;
         configFile = "/etc/wireguard/FI-13.conf";
       };
 
