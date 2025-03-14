@@ -15,9 +15,13 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    virtualisation.docker.rootless = {
-      enable = true;
-      setSocketVariable = true;
+    virtualisation.docker = {
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+
+      enableOnBoot = true;
     };
   };
 }

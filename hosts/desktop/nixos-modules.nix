@@ -50,6 +50,7 @@
 
   programs.developer = {
     android-studio.enable = true;
+    docker.enable = true;
     git.enable = true;
     # mongodb-compass.enable = true;
     # postman.enable = true;
