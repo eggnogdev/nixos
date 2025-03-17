@@ -19,5 +19,7 @@ in
       wireguard-tools
       wireguard-ui
     ];
+
+    networking.wireguard.enable = true;
   };
 }
