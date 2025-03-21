@@ -42,7 +42,6 @@
 
   programs.design = {
     freecad.enable = true;
-    gimp.enable = true;
     krita.enable = true;
     # orca-slicer.enable = true;
     prusa-slicer.enable = true;
@@ -70,6 +69,13 @@
     libreoffice.enable = true;
     protonmail.enable = true;
     # thunderbird.enable = true;
+  };
+
+  programs.photography = {
+    # darktable.enable = true;
+    digikam.enable = true;
+    gimp.enable = true;
+    rawtherapee.enable = true;
   };
 
   programs.infosec = {

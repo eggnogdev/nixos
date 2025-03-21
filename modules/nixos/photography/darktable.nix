@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.design.rawtherapee;
+  cfg = config.programs.photography.darktable;
 in
 {
   options = {
-    programs.design.rawtherapee = {
+    programs.photography.darktable = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable RawTherapee";
+        description = "Enable darktable";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      rawtherapee
+      darktable
     ];
   };
 }
