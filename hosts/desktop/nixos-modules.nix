@@ -79,6 +79,7 @@
   };
 
   programs.infosec = {
+    clamav.enable = true;
     keepassxc.enable = true;
     # protonvpn.enable = true;
     veracrypt.enable = true;
