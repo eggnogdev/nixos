@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.design.rawtherapee;
+  cfg = config.programs.utils.solaar;
 in
 {
   options = {
-    programs.design.rawtherapee = {
+    programs.utils.solaar = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable RawTherapee";
+        description = "Enable Solaar";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      rawtherapee
+      solaar
     ];
   };
 }

@@ -42,8 +42,7 @@
 
   programs.design = {
     freecad.enable = true;
-    gimp.enable = true;
-    krita.enable = true;
+    # krita.enable = true;
     # orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
@@ -72,9 +71,17 @@
     # thunderbird.enable = true;
   };
 
+  programs.photography = {
+    # darktable.enable = true;
+    # digikam.enable = true;
+    # gimp.enable = true;
+    # rawtherapee.enable = true;
+  };
+
   programs.infosec = {
+    clamav.enable = true;
     keepassxc.enable = true;
-    protonvpn.enable = true;
+    # protonvpn.enable = true;
     veracrypt.enable = true;
     wireguard.enable = true;
   };
@@ -91,12 +98,13 @@
     pciutils.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
+    solaar.enable = true;
     virtualbox = {
       enable = true;
       authorizedUsers = [ "eggnog" ];
     };
 
-    xclicker.enable = true;
+    # xclicker.enable = true;
   };
 
   programs.shells = {
@@ -109,7 +117,7 @@
   };
 
   programs.video = {
-    # obs-studio.enable = true;
+    obs-studio.enable = true;
     vlc.enable = true;
   };
 }

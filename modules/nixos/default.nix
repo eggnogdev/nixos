@@ -13,6 +13,7 @@
 		./infosec
 		./keyboard
 		./office
+		./photography
 		./shells
 		./utils
 		./video

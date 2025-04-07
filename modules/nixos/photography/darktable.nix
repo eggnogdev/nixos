@@ -1,25 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.infosec.wireguard;
+  cfg = config.programs.photography.darktable;
 in
 {
   options = {
-    programs.infosec.wireguard = {
+    programs.photography.darktable = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Wireguard";
+        description = "Enable darktable";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      wireguard-tools
-      wireguard-ui
+      darktable
     ];
-
-    networking.wireguard.enable = true;
   };
 }
