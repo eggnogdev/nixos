@@ -42,7 +42,7 @@
 
   programs.design = {
     freecad.enable = true;
-    krita.enable = true;
+    # krita.enable = true;
     # orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
@@ -73,9 +73,9 @@
 
   programs.photography = {
     # darktable.enable = true;
-    digikam.enable = true;
-    gimp.enable = true;
-    rawtherapee.enable = true;
+    # digikam.enable = true;
+    # gimp.enable = true;
+    # rawtherapee.enable = true;
   };
 
   programs.infosec = {
@@ -104,7 +104,7 @@
       authorizedUsers = [ "eggnog" ];
     };
 
-    xclicker.enable = true;
+    # xclicker.enable = true;
   };
 
   programs.shells = {
@@ -117,7 +117,7 @@
   };
 
   programs.video = {
-    # obs-studio.enable = true;
+    obs-studio.enable = true;
     vlc.enable = true;
   };
 }

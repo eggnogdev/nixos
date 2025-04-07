@@ -34,6 +34,7 @@
     extraHosts = 
       ''
         195.148.21.183 ff-vm-1
+        192.168.1.108 lab-1
       '';
 
     firewall.enable = true;
