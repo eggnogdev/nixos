@@ -34,6 +34,7 @@
     extraHosts = 
       ''
         195.148.21.183 ff-vm-1
+        192.168.1.108 lab-1
       '';
 
     firewall.enable = true;
@@ -42,7 +43,7 @@
     wg-quick.interfaces = {
       # ProtonVPN FI#13
       fi-13 = {
-        autostart = false;
+        autostart = true;
         configFile = "/etc/wireguard/FI-13.conf";
       };
 
@@ -90,6 +91,8 @@
     enable = true;
     enable32Bit = true;
   };
+
+  hardware.logitech.wireless.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
 

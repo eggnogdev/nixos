@@ -16,6 +16,7 @@ in
 
   config = lib.mkIf cfg.enable {
     virtualisation.docker = {
+      enable = true;
       rootless = {
         enable = true;
         setSocketVariable = true;
@@ -23,5 +24,9 @@ in
 
       enableOnBoot = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      docker
+    ];
   };
 }

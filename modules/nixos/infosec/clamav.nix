@@ -1,25 +1,27 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.infosec.wireguard;
+  cfg = config.programs.infosec.clamav;
 in
 {
   options = {
-    programs.infosec.wireguard = {
+    programs.infosec.clamav = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Wireguard";
+        description = "Enable ClamAV";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      wireguard-tools
-      wireguard-ui
+      clamav
     ];
 
-    networking.wireguard.enable = true;
+    services.clamav = {
+      daemon.enable = true;
+      updater.enable = true;
+    };
   };
 }

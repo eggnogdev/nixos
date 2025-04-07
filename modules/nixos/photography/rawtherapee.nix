@@ -1,25 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.infosec.wireguard;
+  cfg = config.programs.photography.rawtherapee;
 in
 {
   options = {
-    programs.infosec.wireguard = {
+    programs.photography.rawtherapee = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Wireguard";
+        description = "Enable RawTherapee";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      wireguard-tools
-      wireguard-ui
+      rawtherapee
     ];
-
-    networking.wireguard.enable = true;
   };
 }

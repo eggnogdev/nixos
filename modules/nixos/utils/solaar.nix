@@ -1,25 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.infosec.wireguard;
+  cfg = config.programs.utils.solaar;
 in
 {
   options = {
-    programs.infosec.wireguard = {
+    programs.utils.solaar = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Wireguard";
+        description = "Enable Solaar";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      wireguard-tools
-      wireguard-ui
+      solaar
     ];
-
-    networking.wireguard.enable = true;
   };
 }

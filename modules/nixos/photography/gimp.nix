@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.design.gimp;
+	cfg = config.programs.photography.gimp;
 in
 {
 	options = {
-		programs.design.gimp = {
+		programs.photography.gimp = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;
