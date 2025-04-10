@@ -17,6 +17,7 @@
   };
 
   programs.audio = {
+    goodvibes.enable = true;
     strawberry.enable = true;
   };
 
