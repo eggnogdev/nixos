@@ -115,6 +115,7 @@
     isNormalUser = true;
     initialPassword = "123";
     description = "daniel";
+    home = "/mnt/fc3fc225-f1cf-4b29-b131-24b88b2e433a/home/eggnog";
     shell = pkgs.bash;
     extraGroups = [
       "networkmanager"
