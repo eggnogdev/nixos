@@ -41,6 +41,12 @@
 
     # wireguard VPN configurations
     wg-quick.interfaces = {
+      # Personal WireGuard Network
+      lan = {
+        autostart = false;
+        configFile = "/etc/wireguard/lan.conf";
+      };
+
       # ProtonVPN FI#13
       fi-13 = {
         autostart = true;

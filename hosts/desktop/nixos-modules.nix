@@ -21,6 +21,13 @@
     strawberry.enable = true;
   };
 
+  programs.browsers = {
+    chromium.enable = true;
+    firefox.enable = true;
+    mullvad-browser.enable = true;
+    tor-browser.enable = true;
+  };
+
   programs.cliutils = {
     exiftool.enable = true;
     neofetch.enable = true;
@@ -31,14 +38,8 @@
   programs.communication = {
     discord.enable = true;
     signal.enable = true;
+    # simplex-chat.enable = true;
     # telegram.enable = true;
-  };
-
-  programs.browsers = {
-    chromium.enable = true;
-    firefox.enable = true;
-    mullvad-browser.enable = true;
-    tor-browser.enable = true;
   };
 
   programs.design = {
