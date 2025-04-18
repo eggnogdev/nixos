@@ -17,8 +17,9 @@
   };
 
   programs.audio = {
+    gnome-podcasts.enable = true;
     goodvibes.enable = true;
-    kasts.enable = true;
+    # kasts.enable = true;
     strawberry.enable = true;
   };
 
