@@ -18,6 +18,7 @@
 
   programs.audio = {
     goodvibes.enable = true;
+    kasts.enable = true;
     strawberry.enable = true;
   };
 
