@@ -109,7 +109,7 @@
       authorizedUsers = [ "eggnog" ];
     };
 
-    # xclicker.enable = true;
+    xclicker.enable = true;
   };
 
   programs.shells = {
