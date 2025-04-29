@@ -143,21 +143,28 @@
     powerOnBoot = true;
   };
 
+  hardware.logitech.wireless.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  # unfree must be allowed for nvidia
+  nixpkgs.config.allowUnfree = true;
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+    ];
   };
-
-  hardware.logitech.wireless.enable = true;
-
-  services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    open = false;
+    open = true;
 
     nvidiaSettings = true;
 

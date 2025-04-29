@@ -99,6 +99,7 @@
   programs.utils = {
     gnomediskutil.enable = true;
     keychain.enable = true;
+    lshw.enable = true;
     # ollama.enable = true;
     pciutils.enable = true;
     qbittorrent.enable = true;
