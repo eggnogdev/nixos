@@ -99,7 +99,7 @@
 
       # ProtonVPN FI#13
       fi-13 = {
-        autostart = true;
+        autostart = false;
         configFile = "/etc/wireguard/FI-13.conf";
       };
 
@@ -107,6 +107,18 @@
       fi-35 = {
         autostart = false;
         configFile = "/etc/wireguard/FI-35.conf";
+      };
+
+      # ProtonVPN SE#77
+      se-77 = {
+        autostart = true;
+        configFile = "/etc/wireguard/SE-77.conf";
+      };
+
+      # ProtonVPN SE#271
+      se-271 = {
+        autostart = false;
+        configFile = "/etc/wireguard/SE-271.conf";
       };
     };
   };
