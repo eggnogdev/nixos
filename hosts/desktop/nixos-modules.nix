@@ -43,6 +43,7 @@
     signal.enable = true;
     # simplex-chat.enable = true;
     # telegram.enable = true;
+    # threema.enable = true;
   };
 
   programs.design = {

@@ -4,5 +4,6 @@
 		./signal.nix
 		./simplex-chat.nix
 		./telegram.nix
+		./threema.nix
 	];
 }
