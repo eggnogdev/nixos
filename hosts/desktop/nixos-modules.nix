@@ -12,6 +12,8 @@
     # variant = "dvorak";
   };
 
+  # appearance.theme.orchis.enable = true;
+
   fonts = {
     fantasque-sans-mono.enable = true;
   };
