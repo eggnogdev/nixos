@@ -164,19 +164,21 @@
 
   hardware.graphics = {
     enable = true;
-    enable32Bit = true;
 
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
     ];
   };
 
+  # ensure nouveau drivers are not installed
+  boot.blacklistedKernelModules = [ "nouveau" ];
+
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    open = true;
+    open = false;
 
     nvidiaSettings = true;
 
