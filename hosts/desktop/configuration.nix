@@ -178,13 +178,14 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    open = false;
+    open = true;
 
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  nixpkgs.config.cudaSupport = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
