@@ -5,7 +5,7 @@
     ../../modules/nixos
   ];
 
-  system.desktopEnvironment.xfce.enable = true;
+  system.desktopEnvironment.plasma6.enable = true;
 
   system.keyboard = {
     layout = "us";
@@ -100,7 +100,7 @@
   };
 
   programs.utils = {
-    blueman.enable = true;
+    # blueman.enable = true;
     gnomediskutil.enable = true;
     keychain.enable = true;
     lshw.enable = true;
