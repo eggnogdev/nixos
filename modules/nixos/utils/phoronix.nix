@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.phoronix-test-suite;
+  cfg = config.programs.utils.phoronix;
 in
 {
   options = {
-    programs.utils.phoronix-test-suite = {
+    programs.utils.phoronix = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
