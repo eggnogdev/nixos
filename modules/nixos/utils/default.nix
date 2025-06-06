@@ -5,6 +5,7 @@
 		./lshw.nix
 		./ollama.nix
 		./pciutils.nix
+		./phoronix.nix
 		./qbittorrent.nix
 		./rpi-imager.nix
 		./solaar.nix

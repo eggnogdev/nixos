@@ -105,6 +105,7 @@
     lshw.enable = true;
     # ollama.enable = true;
     pciutils.enable = true;
+    phoronix.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
     solaar.enable = true;
