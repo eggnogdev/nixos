@@ -20,9 +20,9 @@
 
   programs.audio = {
     # gnome-podcasts.enable = true;
-    goodvibes.enable = true;
+    # goodvibes.enable = true;
     # kasts.enable = true;
-    musicpod.enable = true;
+    # musicpod.enable = true;
     strawberry.enable = true;
   };
 
@@ -100,6 +100,7 @@
   };
 
   programs.utils = {
+    blueman.enable = true;
     gnomediskutil.enable = true;
     keychain.enable = true;
     lshw.enable = true;

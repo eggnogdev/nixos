@@ -1,5 +1,6 @@
 {
 	imports = [
+		./blueman.nix
 		./gnomediskutil.nix
 		./keychain.nix
 		./lshw.nix
