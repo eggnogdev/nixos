@@ -21,6 +21,8 @@ in
 	};
 
 	config = lib.mkIf cfg.enable {
+		boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
+		
 		virtualisation.virtualbox = {
 			host.enable = true;
 			guest.enable = true;

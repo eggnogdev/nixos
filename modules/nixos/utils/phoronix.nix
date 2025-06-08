@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.programs.utils.phoronix;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.utils.phoronix = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable Phoronix Test Suite";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      phoronix-test-suite
     ];
   };
 }

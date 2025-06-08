@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.programs.audio.gnome-podcasts;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.audio.gnome-podcasts = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable GNOME Podcasts";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      gnome-podcasts
     ];
   };
 }

@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.programs.communication.threema;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.communication.threema = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable Threema Desktop";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      threema-desktop
     ];
   };
 }

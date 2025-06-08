@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.programs.communication.simplex-chat;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.communication.simplex-chat = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable SimpleX Chat";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      simplex-chat-desktop
     ];
   };
 }

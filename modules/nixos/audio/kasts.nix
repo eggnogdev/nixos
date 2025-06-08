@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.programs.audio.kasts;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.audio.kasts = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable KDE Kasts";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      kdePackages.kasts
     ];
   };
 }

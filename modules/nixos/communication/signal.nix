@@ -16,7 +16,7 @@ in
 
 	config = lib.mkIf cfg.enable {
 		environment.systemPackages = with pkgs; [
-			signal-desktop
+			signal-desktop-bin
 		];
 	};
 }
