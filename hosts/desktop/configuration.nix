@@ -14,6 +14,39 @@
 
   boot.initrd.luks.devices."luks-0edce6e9-b390-4f18-b860-f4bb1c3dc20f".device = "/dev/disk/by-uuid/0edce6e9-b390-4f18-b860-f4bb1c3dc20f";
 
+  # create a shorter path for ssd-1
+  fileSystems."/mnt/ssd-1" = {
+    depends = [
+      "/mnt/fc3fc225-f1cf-4b29-b131-24b88b2e433a"
+    ];
+
+    device = "/mnt/fc3fc225-f1cf-4b29-b131-24b88b2e433a";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
+  # create a shorter path for hdd-1
+  fileSystems."/mnt/hdd-1" = {
+    depends = [
+      "/mnt/e981340d-830e-4508-ba3d-a00bac499cac"
+    ];
+
+    device = "/mnt/e981340d-830e-4508-ba3d-a00bac499cac";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
+  # bind /home to ssd-1 /home
+  fileSystems."/home" = {
+    depends = [
+      "/mnt/ssd-1"
+    ];
+
+    device = "/mnt/ssd-1/home";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nix.optimise = {
@@ -37,13 +70,36 @@
         192.168.1.108 lab-1
       '';
 
-    firewall.enable = true;
+    firewall = {
+      enable = true;
+
+      # open ports for WireGuard public interface
+      interfaces."public" = {
+        allowedTCPPorts = [ 25565 ];
+        allowedUDPPortRanges = [
+          { from = 25565; to = 25565; }
+        ];
+      };
+    };
+
 
     # wireguard VPN configurations
     wg-quick.interfaces = {
+      # Personal WireGuard Network
+      lan = {
+        autostart = false;
+        configFile = "/etc/wireguard/lan.conf";
+      };
+
+      # Public WireGuard Network (for trusted)
+      public = {
+        autostart = false;
+        configFile = "/etc/wireguard/public.conf";
+      };
+
       # ProtonVPN FI#13
       fi-13 = {
-        autostart = true;
+        autostart = false;
         configFile = "/etc/wireguard/FI-13.conf";
       };
 
@@ -51,6 +107,18 @@
       fi-35 = {
         autostart = false;
         configFile = "/etc/wireguard/FI-35.conf";
+      };
+
+      # ProtonVPN SE#77
+      se-77 = {
+        autostart = false;
+        configFile = "/etc/wireguard/SE-77.conf";
+      };
+
+      # ProtonVPN SE#271
+      se-271 = {
+        autostart = true;
+        configFile = "/etc/wireguard/SE-271.conf";
       };
     };
   };
@@ -87,21 +155,27 @@
     powerOnBoot = true;
   };
 
+  hardware.logitech.wireless.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  # unfree must be allowed for nvidia
+  nixpkgs.config.allowUnfree = true;
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
 
-  hardware.logitech.wireless.enable = true;
-
-  services.xserver.videoDrivers = ["nvidia"];
+  # ensure nouveau drivers are not installed
+  boot.blacklistedKernelModules = [ "nouveau" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    open = false;
+    open = true;
 
     nvidiaSettings = true;
 
@@ -115,6 +189,7 @@
     isNormalUser = true;
     initialPassword = "123";
     description = "daniel";
+    home = "/home/eggnog";
     shell = pkgs.bash;
     extraGroups = [
       "networkmanager"

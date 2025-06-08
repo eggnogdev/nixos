@@ -1,22 +1,21 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.appearance.theme.orchis;
 in
 {
   options = {
-    programs.communication.discord = {
+    appearance.theme.orchis = {
       enable = lib.mkOption {
-        type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable Orchis Theme";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      orchis-theme
     ];
   };
 }

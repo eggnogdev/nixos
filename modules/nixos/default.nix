@@ -15,6 +15,7 @@
 		./office
 		./photography
 		./shells
+		./themes
 		./utils
 		./video
 	];

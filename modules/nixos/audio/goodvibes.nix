@@ -1,22 +1,23 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  # Goodvibes radio player
+  cfg = config.programs.audio.goodvibes;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.audio.goodvibes = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable Goodvibes";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      discord
+      goodvibes
     ];
   };
 }

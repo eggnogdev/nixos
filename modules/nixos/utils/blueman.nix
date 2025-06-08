@@ -1,22 +1,20 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.communication.discord;
+  cfg = config.programs.utils.blueman;
 in
 {
   options = {
-    programs.communication.discord = {
+    programs.utils.blueman = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Discord";
+        description = "Enable Blueman";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      discord
-    ];
+    services.blueman.enable = true;
   };
 }

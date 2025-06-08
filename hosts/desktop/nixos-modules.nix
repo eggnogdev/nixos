@@ -5,19 +5,32 @@
     ../../modules/nixos
   ];
 
-  system.desktopEnvironment.plasma6.enable = true;
+  system.desktopEnvironment.xfce.enable = true;
 
   system.keyboard = {
     layout = "us";
     # variant = "dvorak";
   };
 
+  # appearance.theme.orchis.enable = true;
+
   fonts = {
     fantasque-sans-mono.enable = true;
   };
 
   programs.audio = {
+    # gnome-podcasts.enable = true;
+    # goodvibes.enable = true;
+    # kasts.enable = true;
+    # musicpod.enable = true;
     strawberry.enable = true;
+  };
+
+  programs.browsers = {
+    chromium.enable = true;
+    firefox.enable = true;
+    mullvad-browser.enable = true;
+    tor-browser.enable = true;
   };
 
   programs.cliutils = {
@@ -30,14 +43,9 @@
   programs.communication = {
     discord.enable = true;
     signal.enable = true;
+    # simplex-chat.enable = true;
     # telegram.enable = true;
-  };
-
-  programs.browsers = {
-    chromium.enable = true;
-    firefox.enable = true;
-    mullvad-browser.enable = true;
-    tor-browser.enable = true;
+    # threema.enable = true;
   };
 
   programs.design = {
@@ -92,10 +100,13 @@
   };
 
   programs.utils = {
+    blueman.enable = true;
     gnomediskutil.enable = true;
     keychain.enable = true;
+    lshw.enable = true;
     # ollama.enable = true;
     pciutils.enable = true;
+    phoronix.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
     solaar.enable = true;
@@ -104,7 +115,7 @@
       authorizedUsers = [ "eggnog" ];
     };
 
-    # xclicker.enable = true;
+    xclicker.enable = true;
   };
 
   programs.shells = {
