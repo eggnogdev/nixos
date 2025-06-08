@@ -26,8 +26,11 @@ in
 
 	  security.polkit.enable = true;
 
+
 		environment.systemPackages = with pkgs; [
-			obs-studio
+			(obs-studio.override {
+				cudaSupport = true;
+			})
 		];
 	};
 }

@@ -164,10 +164,7 @@
 
   hardware.graphics = {
     enable = true;
-
-    extraPackages = with pkgs; [
-      nvidia-vaapi-driver
-    ];
+    enable32Bit = true;
   };
 
   # ensure nouveau drivers are not installed
@@ -185,7 +182,6 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  nixpkgs.config.cudaSupport = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

@@ -15,8 +15,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      blueman
-    ];
+    services.blueman.enable = true;
   };
 }
