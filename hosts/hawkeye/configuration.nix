@@ -61,7 +61,7 @@
   };
 
   networking = {
-    hostName = "teekannu";
+    hostName = "hawkeye";
     networkmanager.enable = true;
 
     extraHosts = 
