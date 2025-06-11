@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.hwutils.phoronix;
+  cfg = config.programs.hwutils.mangohud;
 in
 {
   options = {
-    programs.hwutils.phoronix = {
+    programs.hwutils.mangohud = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable Phoronix Test Suite";
+        description = "Enable MangoHUD";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      phoronix-test-suite
+      mangohud
     ];
   };
 }

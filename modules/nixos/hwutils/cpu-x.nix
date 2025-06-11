@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.cpu-x;
+  cfg = config.programs.hwutils.cpu-x;
 in
 {
   options = {
-    programs.utils.cpu-x = {
+    programs.hwutils.cpu-x = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;

@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.utils.pciutils;
+	cfg = config.programs.hwutils.pciutils;
 in
 {
 	options = {
-		programs.utils.pciutils = {
+		programs.hwutils.pciutils = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;

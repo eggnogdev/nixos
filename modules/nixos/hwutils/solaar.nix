@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.solaar;
+  cfg = config.programs.hwutils.solaar;
 in
 {
   options = {
-    programs.utils.solaar = {
+    programs.hwutils.solaar = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;

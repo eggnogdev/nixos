@@ -71,6 +71,17 @@
     anki.enable = true;
   };
 
+  programs.hwutils = {
+    cpu-x.enable = true;
+    gnomediskutil.enable = true;
+    lshw.enable = true;
+    mangohud.enable = true;
+    openrgb.enable = true;
+    pciutils.enable = true;
+    phoronix.enable = true;
+    solaar.enable = true;
+  };
+
   programs.office = {
     # anytype.enable = true;
     # gnucash.enable = true;
@@ -101,17 +112,10 @@
 
   programs.utils = {
     blueman.enable = true;
-    cpu-x.enable = true;
-    gnomediskutil.enable = true;
     keychain.enable = true;
-    lshw.enable = true;
-    # ollama.enable = true;
-    openrgb.enable = true;
-    pciutils.enable = true;
-    phoronix.enable = true;
+    # ollama.enable = true;;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
-    solaar.enable = true;
     virtualbox = {
       enable = true;
       authorizedUsers = [ "eggnog" ];

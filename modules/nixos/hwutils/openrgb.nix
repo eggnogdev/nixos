@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.openrgb;
+  cfg = config.programs.hwutils.openrgb;
 in
 {
   options = {
-    programs.utils.openrgb = {
+    programs.hwutils.openrgb = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;

@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.lshw;
+  cfg = config.programs.hwutils.lshw;
 in
 {
   options = {
-    programs.utils.lshw = {
+    programs.hwutils.lshw = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
