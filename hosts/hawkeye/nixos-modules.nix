@@ -101,10 +101,12 @@
 
   programs.utils = {
     blueman.enable = true;
+    cpu-x.enable = true;
     gnomediskutil.enable = true;
     keychain.enable = true;
     lshw.enable = true;
     # ollama.enable = true;
+    openrgb.enable = true;
     pciutils.enable = true;
     phoronix.enable = true;
     qbittorrent.enable = true;
