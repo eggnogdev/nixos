@@ -42,6 +42,7 @@
 
   programs.communication = {
     discord.enable = true;
+    nheko.enable = true;
     signal.enable = true;
     # simplex-chat.enable = true;
     # telegram.enable = true;
