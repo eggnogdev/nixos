@@ -1,5 +1,6 @@
 {
 	imports = [
+		./cinny.nix
 		./discord.nix
 		./nheko.nix
 		./signal.nix

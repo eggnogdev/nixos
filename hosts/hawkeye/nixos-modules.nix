@@ -41,8 +41,9 @@
   };
 
   programs.communication = {
+    cinny.enable = true;
     discord.enable = true;
-    nheko.enable = true;
+    # nheko.enable = true;
     signal.enable = true;
     # simplex-chat.enable = true;
     # telegram.enable = true;
