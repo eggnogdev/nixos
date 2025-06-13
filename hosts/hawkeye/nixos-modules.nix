@@ -108,6 +108,9 @@
   };
 
   programs.games = {
+    # bottles.enable = true;
+    # heroic.enable = true;
+    lutris.enable = true;
     prismlauncher.enable = true;
     steam.enable = true;
   };
