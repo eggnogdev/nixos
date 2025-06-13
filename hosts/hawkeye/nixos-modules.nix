@@ -119,7 +119,8 @@
     blueman.enable = true;
     goverlay.enable = true;
     keychain.enable = true;
-    # ollama.enable = true;;
+    # nix-ld.enable = true;
+    # ollama.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
     virtualbox = {
