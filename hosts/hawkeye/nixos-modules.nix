@@ -117,6 +117,7 @@
 
   programs.utils = {
     blueman.enable = true;
+    goverlay.enable = true;
     keychain.enable = true;
     # ollama.enable = true;;
     qbittorrent.enable = true;
