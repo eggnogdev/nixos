@@ -19,6 +19,16 @@ in
       enable = true;
       port = 5468;
       address = "0.0.0.0";
+
+      settings = {
+        db = {
+          dbname = "invidious";
+          user = "invidious";
+          password = "invidious";
+          host = "localhost";
+          port = 5469;
+        };
+      };
     };
   };
 }
