@@ -90,7 +90,7 @@
     clamav.enable = true;
     # keepassxc.enable = true;
     # protonvpn.enable = true;
-    veracrypt.enable = true;
+    # veracrypt.enable = true;
     wireguard.enable = true;
   };
 
