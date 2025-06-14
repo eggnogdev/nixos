@@ -27,6 +27,10 @@
     wireguard.enable = true;
   };
 
+  programs.selfhosted = {
+    invidious.enable = true;
+  };
+
   programs.shells = {
     bash = {
       aliases = {
