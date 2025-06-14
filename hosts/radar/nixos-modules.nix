@@ -29,6 +29,7 @@
 
   programs.selfhosted = {
     invidious.enable = true;
+    miniflux.enable = true;
   };
 
   programs.shells = {
