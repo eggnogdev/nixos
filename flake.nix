@@ -14,6 +14,13 @@
         ];
       };
 
+      radar = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/radar/configuration.nix
+        ];
+      };
+
       # add configurations for other hosts...
     };
   };
