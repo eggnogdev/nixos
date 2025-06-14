@@ -31,6 +31,15 @@
     firewall = {
       enable = true;
     };
+
+    # wireguard VPN configurations
+    wg-quick.interfaces = {
+      # ProtonVPN IS#10
+      is-10 = {
+        autostart = true;
+        configFile = "/etc/wireguard/IS-10.conf";
+      };
+    };
   };
 
   # Default to UTC
