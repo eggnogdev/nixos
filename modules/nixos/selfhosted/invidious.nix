@@ -20,5 +20,9 @@ in
       port = 5468;
       address = "0.0.0.0";
     };
+
+    networking.firewall.allowedTCPPorts = [
+      config.services.invidious.port
+    ];
   };
 }
