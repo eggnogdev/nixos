@@ -24,5 +24,10 @@ in
         PORT = 27159;
       };
     };
+
+    networking.firewall.allowedTCPPorts = [
+      config.services.miniflux.config.PORT
+    ];
   };
 }
+
