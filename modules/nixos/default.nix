@@ -14,6 +14,7 @@
 		./keyboard
 		./office
 		./photography
+		./selfhosted
 		./shells
 		./themes
 		./utils
