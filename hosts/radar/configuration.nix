@@ -4,45 +4,46 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./nixos-modules.nix
     ];
 
-  # Use the extlinux boot loader. (NixOS wants to enable GRUB by default)
-  boot.loader.grub.enable = false;
-  # Enables the generation of /boot/extlinux/extlinux.conf
-  boot.loader.generic-extlinux-compatible.enable = true;
+  boot.loader = {
+    grub.enable = false;
+    generic-extlinux-compatible.enable = true;
+  };
 
-  networking.hostName = "radar"; # Define your hostname.
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Set your time zone.
-  time.timeZone = "Europe/Helsinki";
+  nix.optimise = {
+    automatic = true;
+    dates = [ "daily" ];
+  };
 
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 30d";
+  };
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
+  networking = {
+    hostName = "radar";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.alice = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     tree
-  #   ];
-  # };
+    firewall = {
+      enable = true;
+    };
+  };
+
+  # Default to UTC
+  time.timeZone = null;
 
   users.users.admin = {
     isNormalUser = true;
+    initialPassword = "123";
+    description = "admin";
+    home = "/home/admin";
+    shell = pkgs.bash;
     extraGroups = [ "wheel" ];
   };
-
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-  ];
 
   services.openssh.enable = true;
 
