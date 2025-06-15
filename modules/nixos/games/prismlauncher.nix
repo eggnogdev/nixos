@@ -18,5 +18,7 @@ in
 		environment.systemPackages = with pkgs; [
 			prismlauncher
 		];
+
+		programs.gamemode.enable = true;
 	};
 }

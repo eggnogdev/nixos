@@ -1,15 +1,12 @@
 {
 	imports = [
 		./blueman.nix
-		./gnomediskutil.nix
+		./goverlay.nix
 		./keychain.nix
-		./lshw.nix
+		./nix-ld.nix
 		./ollama.nix
-		./pciutils.nix
-		./phoronix.nix
 		./qbittorrent.nix
 		./rpi-imager.nix
-		./solaar.nix
 		./virtualbox.nix
 		./xclicker.nix
 	];

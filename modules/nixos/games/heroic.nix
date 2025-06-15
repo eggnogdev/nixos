@@ -1,22 +1,24 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.lshw;
+  cfg = config.programs.games.heroic;
 in
 {
   options = {
-    programs.utils.lshw = {
+    programs.games.heroic = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Enable lshw";
+        description = "Enable Heroic";
       };
     };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      lshw
+      heroic
     ];
+
+    programs.gamemode.enable = true;
   };
 }

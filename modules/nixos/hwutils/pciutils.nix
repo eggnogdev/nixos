@@ -1,22 +1,22 @@
 { config, lib, pkgs, ... }:
 
 let
-	cfg = config.programs.utils.gnomediskutil;
+	cfg = config.programs.hwutils.pciutils;
 in
 {
 	options = {
-		programs.utils.gnomediskutil = {
+		programs.hwutils.pciutils = {
 			enable = lib.mkOption {
 				type = lib.types.bool;
 				default = false;
-				description = "Enable GNOME Disk Utility";
+				description = "Enable pciutils";
 			};
 		};
 	};
 
 	config = lib.mkIf cfg.enable {
 		environment.systemPackages = with pkgs; [
-			gnome-disk-utility
+			pciutils
 		];
 	};
 }

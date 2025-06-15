@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.utils.phoronix;
+  cfg = config.programs.hwutils.phoronix;
 in
 {
   options = {
-    programs.utils.phoronix = {
+    programs.hwutils.phoronix = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;

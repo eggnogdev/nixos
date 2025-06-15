@@ -41,7 +41,9 @@
   };
 
   programs.communication = {
+    cinny.enable = true;
     discord.enable = true;
+    # nheko.enable = true;
     signal.enable = true;
     # simplex-chat.enable = true;
     # telegram.enable = true;
@@ -71,6 +73,17 @@
     anki.enable = true;
   };
 
+  programs.hwutils = {
+    cpu-x.enable = true;
+    gnomediskutil.enable = true;
+    lshw.enable = true;
+    mangohud.enable = true;
+    openrgb.enable = true;
+    pciutils.enable = true;
+    phoronix.enable = true;
+    solaar.enable = true;
+  };
+
   programs.office = {
     # anytype.enable = true;
     # gnucash.enable = true;
@@ -95,21 +108,21 @@
   };
 
   programs.games = {
+    # bottles.enable = true;
+    # heroic.enable = true;
+    lutris.enable = true;
     prismlauncher.enable = true;
     steam.enable = true;
   };
 
   programs.utils = {
     blueman.enable = true;
-    gnomediskutil.enable = true;
+    goverlay.enable = true;
     keychain.enable = true;
-    lshw.enable = true;
+    # nix-ld.enable = true;
     # ollama.enable = true;
-    pciutils.enable = true;
-    phoronix.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
-    solaar.enable = true;
     virtualbox = {
       enable = true;
       authorizedUsers = [ "eggnog" ];

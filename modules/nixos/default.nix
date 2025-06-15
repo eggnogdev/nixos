@@ -10,6 +10,7 @@
 		./education
 		./fonts
 		./games
+		./hwutils
 		./infosec
 		./keyboard
 		./office
