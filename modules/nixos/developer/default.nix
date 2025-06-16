@@ -4,6 +4,7 @@
 		./docker.nix
 		./git.nix
 		./mongodb-compass.nix
+		./nvim.nix
 		./postman.nix
 		./sublime-merge.nix
 		./sublime-text.nix

@@ -3,14 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nvf, ... }@inputs: {
     nixosConfigurations = {
       hawkeye = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/hawkeye/configuration.nix
+          nvf.nixosModules.default
         ];
       };
 
@@ -18,6 +20,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/radar/configuration.nix
+          nvf.nixosModules.default
         ];
       };
 

@@ -62,6 +62,7 @@
     docker.enable = true;
     git.enable = true;
     # mongodb-compass.enable = true;
+    nvim.enable = true;
     # postman.enable = true;
     sublime-merge.enable = true;
     sublime-text.enable = true;
