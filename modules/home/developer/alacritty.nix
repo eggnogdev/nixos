@@ -21,6 +21,8 @@ in
         font.normal.family = "FantasqueSansM Nerd Font";
         font.size = 16;
       };
+
+      theme = "material_theme";
     };
   };
 }
