@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -196,6 +196,11 @@
       "syncthing"
       "wheel"
     ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users."eggnog" = import ./home-modules.nix;
   };
 
   services.openssh.enable = true;
