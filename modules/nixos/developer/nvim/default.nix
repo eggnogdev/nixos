@@ -1,9 +1,11 @@
-{ config, lib, pkgs, ... }:
-
-let
-  cfg = config.programs.developer.nvim;
-in
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  cfg = config.programs.developer.nvim;
+in {
   options = {
     programs.developer.nvim = {
       enable = lib.mkOption {
@@ -15,9 +17,27 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      gcc # need C compiler for now with kickstart config
+    ];
+
     programs.nvf = {
       enable = true;
+      enableManpages = true;
+
       settings.vim = {
+        additionalRuntimePaths = [
+          ./config
+        ];
+
+        luaConfigRC.kickstart =
+          /*
+          lua
+          */
+          ''
+            require("kickstart")
+          '';
+
         theme = {
           enable = true;
           name = "base16";
@@ -41,22 +61,6 @@ in
             base0E = "#C792EA";
             base0F = "#FF5370";
           };
-        };
-
-        lsp.enable = true;
-        languages = {
-          enableTreesitter = true;
-
-          nix.enable = true;
-        };
-
-        statusline.lualine.enable = true;
-        telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-
-        options = {
-          tabstop = 2;
-          shiftwidth = 2;
         };
       };
     };
