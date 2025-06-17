@@ -16,7 +16,7 @@ in
 
   config = lib.mkIf cfg.enable {
     fonts.packages = with pkgs; [
-      fantasque-sans-mono
+      nerd-fonts.fantasque-sans-mono
     ];
   };
 }
