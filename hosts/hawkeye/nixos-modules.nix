@@ -58,6 +58,7 @@
   };
 
   programs.developer = {
+    alacritty.enable = true;
     android-studio.enable = true;
     docker.enable = true;
     git.enable = true;
