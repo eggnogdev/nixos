@@ -1,6 +1,5 @@
 {
 	imports = [
-                ./alacritty.nix
 		./android-studio.nix
 		./docker.nix
 		./git.nix
