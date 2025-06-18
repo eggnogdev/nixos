@@ -52,9 +52,16 @@
     home = "/home/admin";
     shell = pkgs.bash;
     extraGroups = [ "wheel" ];
+
+    openssh.authorizedKeys.keyFiles = [
+      /etc/nixos/ssh/authorized_keys
+    ];
   };
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    # settings.PasswordAuthentication = false;
+  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
