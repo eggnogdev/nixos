@@ -53,8 +53,8 @@
     shell = pkgs.bash;
     extraGroups = [ "wheel" ];
 
-    openssh.authorizedKeys.keyFiles = [
-      /etc/nixos/ssh/authorized_keys
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA58fo+UIk3X4ZcgDGic6AVn+xnOZxlV1mI2PJQ84M7A"
     ];
   };
 
