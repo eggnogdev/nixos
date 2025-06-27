@@ -124,6 +124,7 @@
     # ollama.enable = true;
     qbittorrent.enable = true;
     # rpi-imager.enable = true;
+    syncplay.enable = true;
     virtualbox = {
       enable = true;
       authorizedUsers = [ "eggnog" ];

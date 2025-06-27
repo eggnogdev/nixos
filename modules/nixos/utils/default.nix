@@ -7,6 +7,7 @@
 		./ollama.nix
 		./qbittorrent.nix
 		./rpi-imager.nix
+		./syncplay.nix
 		./virtualbox.nix
 		./xclicker.nix
 	];
