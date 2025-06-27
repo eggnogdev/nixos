@@ -34,6 +34,7 @@
   };
 
   programs.cliutils = {
+    clipse.enable = true;
     exiftool.enable = true;
     neofetch.enable = true;
     tree.enable = true;
