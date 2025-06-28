@@ -23,13 +23,13 @@
     # goodvibes.enable = true;
     # kasts.enable = true;
     # musicpod.enable = true;
-    strawberry.enable = true;
+    # strawberry.enable = true;
   };
 
   programs.browsers = {
-    chromium.enable = true;
+    # chromium.enable = true;
     firefox.enable = true;
-    mullvad-browser.enable = true;
+    # mullvad-browser.enable = true;
     tor-browser.enable = true;
   };
 
@@ -42,7 +42,7 @@
   };
 
   programs.communication = {
-    cinny.enable = true;
+    # cinny.enable = true;
     discord.enable = true;
     # nheko.enable = true;
     signal.enable = true;
@@ -53,14 +53,14 @@
 
   programs.design = {
     freecad.enable = true;
-    # krita.enable = true;
+    krita.enable = true;
     # orca-slicer.enable = true;
     prusa-slicer.enable = true;
   };
 
   programs.developer = {
     android-studio.enable = true;
-    docker.enable = true;
+    # docker.enable = true;
     git.enable = true;
     # mongodb-compass.enable = true;
     nvim.enable = true;
@@ -72,18 +72,22 @@
   };
 
   programs.education = {
-    anki.enable = true;
+    # anki.enable = true;
   };
 
   programs.hwutils = {
+    btop.enable = true;
     cpu-x.enable = true;
     gnomediskutil.enable = true;
     lshw.enable = true;
     mangohud.enable = true;
+    nethogs.enable = true;
     openrgb.enable = true;
     pciutils.enable = true;
     phoronix.enable = true;
+    s-tui.enable = true;
     solaar.enable = true;
+    stress-ng.enable = true;
   };
 
   programs.office = {
@@ -97,7 +101,7 @@
   programs.photography = {
     # darktable.enable = true;
     # digikam.enable = true;
-    # gimp.enable = true;
+    gimp.enable = true;
     # rawtherapee.enable = true;
   };
 
