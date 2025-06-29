@@ -164,6 +164,10 @@
       "syncthing"
       "wheel"
     ];
+
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILNs0bmqPxLC4JucTn+d/z4uqTr0QYaDMyoiWlPwEUrf"
+    ];
   };
 
   home-manager = {
@@ -186,3 +190,4 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 }
+  
