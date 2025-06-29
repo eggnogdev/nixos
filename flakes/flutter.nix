@@ -2,7 +2,7 @@
   description = "Flutter development flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/<nixos-version --revision>";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
