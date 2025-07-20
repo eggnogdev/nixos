@@ -55,12 +55,36 @@
 
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA58fo+UIk3X4ZcgDGic6AVn+xnOZxlV1mI2PJQ84M7A"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILNs0bmqPxLC4JucTn+d/z4uqTr0QYaDMyoiWlPwEUrf"
     ];
   };
 
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = false;
+  };
+
+  services.vsftpd = {
+    enable = true;
+    anonymousUser = true;
+    anonymousMkdirEnable = true;
+    anonymousUploadEnable = true;
+    anonymousUserHome = "/home/ftp";
+    writeEnable = true;
+    extraConfig = ''
+      pasv_min_port=56250
+      pasv_max_port=56260
+      hide_file=*
+      dirlist_enable=NO
+    '';
+  };
+
+  networking.firewall = {
+    allowedTCPPorts = [ 20 21 ];
+    connectionTrackingModules = [ "ftp" ];
+    allowedTCPPortRanges = [
+      { from = 56250; to = 56260; }
+    ];
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
